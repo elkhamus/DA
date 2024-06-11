@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+
+}
+
+header {
+    margin: 20px;
+}
+
+.title {
+    font-size: 2em;
+    line-height: 52px;
+    color: #666;
+    font-weight: 300;
+}
+
+span {
+    font-size: 1.5rem;
+    margin-right: 20px;
+    float: right;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: 40px;
+}
+
+li {
+    margin: 10px 0;
+    color: #666;
+}
+
+li i {
+    margin-right: 10px;
+}
+
+.parallax {
+    background-image: url('img/1.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}

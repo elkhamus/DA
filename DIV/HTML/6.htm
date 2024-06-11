@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Form Elements</title>
+	</head>
+	<body>
+		<h1>Form Elementləri</h1>
+		<h2>Login Form</h2>
+		<form action="login.php" method="POST">
+			<p><input type="text" name="user" placeholder="İstifadəçi adı" /></p>
+			<p><input type="password" name="pass" placeholder="Şifre" /></p>
+			<p><input type="submit" value="Daxil ol" /></p>
+		</form>
+		
+		<h2>Qeydiyyat Formu</h2>
+		<p>Ad soyad: <input type="text" /></p>
+		<p>Doğum günü: <input type="date"></p>
+		<p>Doğum yeri: 
+			<select>
+				<option>Armenia</option>
+				<option selected="selected">Azerbaijan</option>
+				<option>Russia</option>
+				<option>Iran</option>
+				<option>Russia</option>
+				<option>Turkey</option>
+				<option>Ukraine</option>
+			</select>
+		</p>
+		<fieldset>
+			<legend>Cinsiyyet: </legend>
+			<input id="m" type="radio" name="sex" checked="checked" /> 
+			<label for="m">Kişi</label>
+			<input id="f" type="radio" name="sex" /> 
+			<label for="f">Qadın</label>
+		</fieldset>
+		<p>Boy: <input type="number" min="150" max="200" />sm</p>
+		<p>Göz rəngi: <input type="color" /></p>
+		<p>Qan qrupu: 
+			<input type="checkbox" /> A
+			<input type="checkbox" /> B
+		</p>
+		<p>Şəkil: <input type="file" /></p>
+		<p>Mesaj: <br />
+			<textarea rows="5" cols="80"></textarea>
+		</p>
+		<p>
+			<input type="reset" value="Təmizlə" />
+			<input type="submit" value="Göndər" />
+		</p>
+	</body>
+</html>

@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 8px;
+    background-color: #333;
+}
+
+ul {
+    display: none;
+}
+
+i {
+    color: white;
+    font-size: 1.5em;
+
+}
+.search {
+    display: flex;
+
+}
+
+input, button{
+    height: 35px;
+    padding: 0 1em;
+}
+
+button {
+    background-color: limegreen;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+@media only screen and (min-width: 665px) {
+    ul {
+        list-style: none;
+        display: flex;
+    }
+    
+    li {
+        display: flex;
+        color: white;
+        padding: 0 1em;
+    }
+
+    i {
+        display: none !important;
+        
+    }
+}

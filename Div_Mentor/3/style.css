@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+}
+
+.cards {
+    margin-top: 150px;
+    text-align: center;
+}
+.card {
+    width: 250px;
+    display: inline-block;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.card-top {
+    background-color: blue;
+    height: 150px;
+    text-align: center;
+}
+
+.red {
+    background-color: red;
+}
+.green {
+
+}
+
+.card-top i {
+    margin-top: 35px;
+    font-size: 2.5rem;
+    background-color: #000;
+    color: blue;
+    padding: 17px 20px;
+    border-radius: 50%;
+
+}
+
+.card-bottom {
+    background-color: #EFE8F7;
+    padding: 10px;
+    text-align: left;
+}
+
+.about {
+    margin: 20px 0;
+}
+
+.bottom-text {
+    text-align: left;
+}
+
+.bottom-text p:nth-child(2) {
+    margin-top: 20px 0;
+}
+
+.btn {
+    text-align: center;
+}
+
+.btn button {
+    background-color: blue;
+    padding: 8px 0;
+    color: #fff;
+    border-radius: 
+    width: 90%;
+}

@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(img/lin.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+.box {
+    background-color: #c0c0c0c2;
+    border: 3px solid black;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px silver;
+    border: none;
+    width: 400px;
+    height: 400px;
+    margin: 150px 100px;
+}
+
+.text {
+    background-color: slategray;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 50px;
+}

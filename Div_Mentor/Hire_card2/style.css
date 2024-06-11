@@ -1,0 +1,102 @@
+
+
+
+body {
+    background: rgb(230,89,19);
+    background: linear-gradient(90deg, rgba(230,89,19,1) 0%, rgba(250,0,0,1) 47%, rgba(216,131,217,1) 100%);
+}
+
+.cards {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 150px;
+    text-align: center;
+}
+
+.card {
+    display: inline-block;
+    background: #e5e2ea;
+    border: 1px solid #333;
+    border-radius: 25px;
+    overflow: hidden;
+    width: 300px;
+    margin: 10px;
+    transition: .5s;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px #333;
+    scale: 1.05;
+    transform:rotate3d(1,1,1,5deg);
+}
+
+.yellow {
+    background: #f1c40f;
+}
+
+.red {
+    background: #e74c3c;
+}
+
+.pink {
+    background: #e91e63;
+}
+
+.card-top {
+    height: 150px;
+    /* text-align: center; */
+    clip-path: circle(62.5% at 50% 0);
+    transition: .4s;
+}
+
+.card-top:hover {
+    clip-path: circle(100% at 50% 0);
+}
+
+.card-top h1 {
+    font: bold 2rem 'Times new roman', serif;
+    font-size: 3rem;
+    padding-top: 30px;
+    color: white;
+    transition: .6s;
+
+}
+
+
+.card-about {
+    padding: 20px;
+    text-align: center;
+}
+.card-bottom {
+    display: block;
+    margin: 10px;
+    text-align: center;
+}
+
+.card-bottom button {
+    
+    width: 35%;
+    padding: 6px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: .6s;
+    cursor: pointer;
+}
+
+.cyellow {
+    background:#f1c40f;
+}
+
+.cred {
+    background: #e74c3c;
+}
+
+.cpink {
+    background: #e91e63;
+
+}
+.card-bottom button:hover {
+    box-shadow: 5px 5px 20px #333;
+    scale: 1.05;
+}
+

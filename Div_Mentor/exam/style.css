@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('img/bg.jpg');
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cards {
+    margin-top: 150px;
+    text-align: center;
+}
+
+.card {
+    display: inline-block;
+    margin: 5px 10px;
+    background: rgba(192, 192, 192, 0.50);
+    border: 1px solid #333;
+    border-radius: 25px;
+    overflow: hidden;
+    width: 230px;
+    transition: .4s;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px #fff;
+    background: white;
+    scale: 1.05;
+}
+
+.card-top {
+    text-align: center;
+    overflow: hidden;
+    font-size: 5rem;
+    padding: 30px;
+    transition: .4s;
+}
+
+.card:hover .card-top {
+    border-bottom-right-radius: 90px;
+}
+
+.card-about {
+
+}
+.card-about h1 {
+    margin: 20px 0;
+}
+
+.card-about p {
+    text-align: left;
+    margin: 20px;
+}
+
+.card-bottom {
+    text-align: center;
+    margin: 10px;
+}
+
+.card-bottom button {   
+    background: black;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 30px;
+    transition: .4s;
+}
+
+.card-bottom button:hover {
+    scale: 1.1;
+}
+.red {
+    background: red;
+}
+
+.blue {
+    background: blue;
+}
+
+.yellow {
+    background: yellow;
+}

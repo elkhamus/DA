@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    margin: 20px 30px;
+}
+
+img.hov {
+    transition: .4s;
+}
+
+img.hov:hover {
+   scale: 1.1;
+   cursor: pointer;
+}
+
+ul {
+    display: inline-block;
+    margin: 20px 30px;
+    font-size: 1.5rem;
+}
+
+li {
+    display: inline;
+    transition: .4s;
+    margin: 0 15px;
+}
+
+li:hover {
+    color: blueviolet;
+    cursor: pointer;
+}
+
+.card {
+    width: 300px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    margin: 150px auto;
+    overflow: hidden;
+}
+
+.top {
+    background-image: url(img/ft.jpg);
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.about h1, p {  
+    margin: 10px 20px;
+
+}
+
+
+.bottom button {
+    margin: 10px 20px;
+    padding: 5px 20px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: blueviolet;
+    color: #fff;
+    transition: .4s;
+}
+
+.bottom button:hover {
+    box-shadow: 5px 5px 20px #333;
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.footer {
+    margin: 10px;    
+    atta
+}
