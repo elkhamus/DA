@@ -1,0 +1,49 @@
+:root {
+
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background: url('../img/headerbg.jpg') center/cover;
+}
+h1 {
+    font: 700 2em Montserrat;
+    text-transform: capitalize;
+    color: #fff;
+}
+#menu li a {
+    font: bold 1em 'Proxima Nova';
+    color: #fff;
+}
+#search { display: flex;}
+#search input, #search  button {
+    height: 27px;
+    border: none;
+    outline: none;
+    background: #ffffffcc;
+    font: 1em 'Myriad Pro';
+    color: #111;
+    padding: 6px 16px;
+}
+#search  button img {
+    height: 1em;
+ }
+#search input[type=search] { border-radius: 1em 0 0 1em}
+#search button { border-radius: 0 1em 1em 0}
+
+@media only screen and (min-width: 768px) {
+    nav {
+        width: 100%; 
+        display: flex;
+        justify-content: space-between;
+    }
+    #menu { 
+        order: -1;
+        display: flex;
+    }
+    h1 { font-size: 3.4em }
+}
