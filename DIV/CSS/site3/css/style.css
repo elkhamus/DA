@@ -1,5 +1,8 @@
 :root {
-
+    --yasil: #54d154
+}
+html {
+    scroll-behavior: smooth;
 }
 header {
     display: flex;
@@ -15,6 +18,30 @@ h1 {
     text-transform: capitalize;
     color: #fff;
 }
+h2 {
+    font: 300 1.25em Montserrat;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+h3 {
+    font: bold 1.5em 'Proxima Nova';
+    color: #818181;
+    padding: 15px;
+}
+h6 {
+    font: 300 1em 'Open Sans', sans-serif;
+}
+hr {
+    border: none;
+    width: 43px;
+}
+.bgag h2, .bgboz h2 { color: #818181 } 
+.bgyasil h2 { color: #1f7b1f } 
+.bgag hr { border-top: 1px solid #818181; } 
+.bgyasil hr { border-top: 1px solid #1f7b1f; } 
+.bgag h6, .bgboz h6 { color: #b3b3b3 } 
+.bgyasil h6 { color: #2b9b2b }
+
 #menu li a {
     font: bold 1em 'Proxima Nova';
     color: #fff;
@@ -35,6 +62,78 @@ h1 {
 #search input[type=search] { border-radius: 1em 0 0 1em}
 #search button { border-radius: 0 1em 1em 0}
 
+main > section {
+    padding: 40px 0 0 0;
+    text-align: center;
+    min-height: 500px;
+}
+#art3 { padding: 46px 0}
+#art3 article { padding: 23px 15px}
+.icon { 
+    display: flex;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    background: #e0f3e0;
+    color: var(--yasil);
+    font-size: 3em
+}
+.icon i { margin: auto } 
+
+.btn2 {
+    display: inline-block;
+    background: var(--yasil);
+    padding: 7px 20px;
+    border-radius: 1em;
+    color: #FFF;
+    margin: 20px 0 0 0
+}
+.btn4 {
+    display: inline-block;
+    background: #2b9b2b;
+    padding: 7px 20px;
+    border-radius: 1em;
+    color: #FFF;
+    margin: 40px 0
+}
+#btn3 { 
+    display: flex; 
+    justify-content: center;
+    padding: 50px;
+}
+#btn3 button {
+    border: 1px solid #2b9b2b;
+    height: 33px;
+    padding: 7px 20px;
+    font: 1em 'Proxima Nova';
+    background-color: #fff;
+    color: #2b9b2b;
+}
+#btn3 button:first-child { border-radius: 20px 0 0 20px }
+#btn3 button:last-child { border-radius: 0 20px 20px 0 }
+#btn3 button.active, #btn3 button:hover { 
+    background-color: #2b9b2b; 
+    color: #fff;
+}
+#back2top { 
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+}
+
+#gallery img {
+    width: 100%;
+    height: 33vh;
+    object-fit: cover;
+    padding: .5em 1em
+}
+
+.bgyasil { background-color: var(--yasil) }
+.bgag { background-color: #fff }
+.bgboz { background-color: #f1f1f1 }
+.txtyasil { color: var(--yasil) }
+
 @media only screen and (min-width: 768px) {
     nav {
         width: 100%; 
@@ -46,4 +145,23 @@ h1 {
         display: flex;
     }
     h1 { font-size: 3.4em }
+    #art3 { display: flex }
+    .icon { 
+        width: 130px;
+        height: 130px;
+        border-radius: 30px;
+        font-size: 4.5em
+    }
+    #gallery  { 
+        max-width: 980px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #gallery img {
+        width: 176px;
+        height: 176px;
+        padding: 1em;
+    }
 }
