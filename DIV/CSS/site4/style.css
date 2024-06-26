@@ -5,7 +5,10 @@ header { background: url('img/headerbg.jpg') 60%/cover }
 .bg-boz { background-color: #f1f1f1 }
 .bg-transp-80 { background-color: #ffffffcc }
 .vh-50 { min-height: 50vh }
-#f1 { background: url('img/feature1.jpg') center/cover }
-#f2 { background: url('img/feature2.jpg') center/cover }
+#f1 { background: url('img/feature1.jpg') center/cover;
+    transition: .7s; 
+}
+#f2 { background: url('img/feature2.jpg') center/cover;
+    transition: .7s; }
 #f1:hover, #f2:hover { opacity: .6 }
 #f1:hover > div, #f2:hover > div { display: initial!important }
