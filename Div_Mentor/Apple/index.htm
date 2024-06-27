@@ -5,64 +5,80 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>iPhone - Apple</title>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    </head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      </head>
     <body>
         <header>
-            <nav class="border-gray-200 bg-[#f2f2f2] container mx-auto px-[1.8rem] max-w-full">
-              <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse fa-brands fa-apple text-[1.5rem]"></a>
-                <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-solid-bg" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                    </svg>
-                </button>
-                <div class="hidden w-full bg-[#f2f2f2] md:block md:w-auto transition-all duration-300" id="navbar-solid-bg">
-                  <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent">
-                    <li>
-                      <a href="#" class="block bg-[#f2f2f2] font-sans font-semibold py-2 px-3 md:p-0 text-gray-900 rounded duration-[.4s] hover:bg-gray-100 hover:underline md:hover:bg-transparent md:border-0">Store</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block bg-[#f2f2f2] font-sans font-semibold py-2 px-3 md:p-0 text-gray-900 rounded duration-[.4s] hover:bg-gray-100 hover:underline md:hover:bg-transparent md:border-0">Mac</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block bg-[#f2f2f2] font-sans font-semibold py-2 px-3 md:p-0 text-gray-900 rounded duration-[.4s] hover:bg-gray-100 hover:underline md:hover:bg-transparent md:border-0">iPad</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block bg-[#f2f2f2] font-sans font-semibold py-2 px-3 md:p-0 text-gray-900 rounded duration-[.4s] hover:bg-gray-100 hover:underline md:hover:bg-transparent md:border-0">iPhone</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block bg-[#f2f2f2] font-sans font-semibold py-2 px-3 md:p-0 text-gray-900 rounded duration-[.4s] hover:bg-gray-100 hover:underline md:hover:bg-transparent md:border-0">Watch</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block bg-[#f2f2f2] font-sans font-semibold py-2 px-3 md:p-0 text-gray-900 rounded duration-[.4s] hover:bg-gray-100 hover:underline md:hover:bg-transparent md:border-0">AirPods</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block bg-[#f2f2f2] font-sans font-semibold py-2 px-3 md:p-0 text-gray-900 rounded duration-[.4s] hover:bg-gray-100 hover:underline md:hover:bg-transparent md:border-0">TV & Home</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block bg-[#f2f2f2] font-sans font-semibold py-2 px-3 md:p-0 text-gray-900 rounded duration-[.4s] hover:bg-gray-100 hover:underline md:hover:bg-transparent md:border-0">Entertainment</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block bg-[#f2f2f2] font-sans font-semibold py-2 px-3 md:p-0 text-gray-900 rounded duration-[.4s] hover:bg-gray-100 hover:underline md:hover:bg-transparent md:border-0">Accessories</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block bg-[#f2f2f2] font-sans font-semibold py-2 px-3 md:p-0 text-gray-900 rounded duration-[.4s] hover:bg-gray-100 hover:underline md:hover:bg-transparent md:border-0">Support</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block bg-[#f2f2f2] font-sans font-semibold py-2 px-3 md:p-0 text-gray-900 rounded duration-[.4s] hover:bg-gray-100 hover:underline md:hover:bg-transparent md:border-0"><i class="fa-solid fa-magnifying-glass"></i></a>
-                    </li>
-                    <li>
-                      <a href="#" class="block bg-[#f2f2f2] font-sans font-semibold py-2 px-3 md:p-0 text-gray-900 rounded duration-[.4s] hover:bg-gray-100 hover:underline md:hover:bg-transparent md:border-0"><i class="fa-solid fa-bag-shopping"></i></a>
-                    </li>
-                  </ul>
+            <nav class="navbar navbar-expand-lg bg-boz">
+                <div id="nav-cont" class="container px-5">
+                    <a id="mob-logo" class="navbar-brand d-lg-none" href="#">
+                        <i class="fa-brands fa-apple" style="font-size: 2rem"></i>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <a class="navbar-brand  ms-auto d-none d-lg-block" href="#">
+                            <i class="fa-brands fa-apple" style="font-size: 2rem"></i>
+                        </a>
+                        <ul class="navbar-nav mb-2 mb-lg-0">
+                            <li class="nav-item mx-lg-2">
+                                <a class="nav-link fw-semibold fs14px" href="#">Store</a>
+                            </li>
+                            <li class="nav-item mx-lg-2">
+                                <a class="nav-link fw-semibold fs14px" href="#">Mac</a>
+                            </li>
+                            <li class="nav-item mx-lg-2">
+                                <a class="nav-link fw-semibold fs14px" href="#">iPad</a>
+                            </li>
+                            <li class="nav-item mx-lg-2">
+                                <a class="nav-link fw-semibold fs14px" href="#">iPhone</a>
+                            </li>
+                            <li class="nav-item mx-lg-2">
+                                <a class="nav-link fw-semibold fs14px" href="#">Watch</a>
+                            </li>
+                            <li class="nav-item mx-lg-2">
+                                <a class="nav-link fw-semibold fs14px" href="#">AirPods</a>
+                            </li>
+                            <li class="nav-item mx-lg-2">
+                                <a class="nav-link fw-semibold fs14px" href="#">TV&Home</a>
+                            </li>
+                            <li class="nav-item mx-lg-2">
+                                <a class="nav-link fw-semibold fs14px" href="#">Entertainment</a>
+                            </li>
+                            <li class="nav-item mx-lg-2">
+                                <a class="nav-link fw-semibold fs14px" href="#">Accessories</a>
+                            </li>
+                            <li class="nav-item mx-lg-2">
+                                <a class="nav-link fw-semibold fs14px" href="#">Support</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav mb-2 mb-lg-0 me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-              </div>
             </nav>
+            <div class="text-center py-4 fs-4 bg-boz">
+                <div class="container w-lg-50 fs-6 get-iphone">
+                    Get $180–$620 in credit toward iPhone 15 or iPhone 15 Pro when you trade in iPhone 11 or higher.1
+                    <a class="text-decoration-none" href="">Shop iPhone &gt; </a>
+                </div>
+            </div>
         </header>
     </body>
 </html>
