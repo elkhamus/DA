@@ -8,6 +8,44 @@ nav ul a:hover {
     text-decoration: underline;
 }
 
+#nav2{
+    overflow-x: auto;
+}
+#nav2::-webkit-scrollbar{
+    display: none;
+}
+
+.nav2{
+    span {
+    color: #bf4800;
+    font-size: 10px;
+}
+    small{
+    font-size: 12px;
+    white-space: nowrap;
+}
+}
+
+#se img{
+    height: 54px;
+    width: 19px;
+}
+#airtag img{
+    height: 54px;
+    width: 30px;
+}
+#apple-card img{
+    height: 54px;
+    width: 36px;
+}
+#ios-17 img{
+    height: 54px;
+    width: 32px;
+}
+.get-iphone p {
+    font-size: 1.3rem;
+}
+
 .bg-boz{ background-color: #f2f2f2;}
 .bg-gri{ background-color: #f9f9f9 !important;}
 .fs14px{ font-size: .8rem;}
@@ -18,12 +56,16 @@ a:hover{
     text-decoration: underline !important;
 }
 
-@media (min-width: 768px) {
-
+@media only screen and (max-width: 768px) {
+    .get-iphone p{
+        /* max-width: 50%; */
+        margin: auto;
+        font-size: 1em !important;
+    }
 }
 
 @media only screen and (max-width: 230px) {
         i.fa-apple {
-            margin-left: 1rem !important;
+            margin-left: 1.2rem !important;
         }
     }
