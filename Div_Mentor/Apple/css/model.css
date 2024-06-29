@@ -40,3 +40,7 @@
 .item-10{
     height: 130px;
 }
+
+.problemfix {
+    transform: translate(0, -1.6px);
+}
