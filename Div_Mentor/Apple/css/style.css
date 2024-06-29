@@ -3,7 +3,7 @@
     padding: 0; 
     box-sizing: border-box; 
 }
-.new-color {
+.new-color, .new {
     font-size: 12px !important;
     font-weight: 400 !important;
     color: #bf4800;
@@ -102,6 +102,19 @@ nav ul a:hover {
     font-size: 17px !important;
     font-weight: 400 !important;
 }
+.ultimate{
+    font-size: 18px !important;
+    font-weight: 400 !important;
+}
+.learn-more{
+    font-size: 14px !important;
+    font-weight: 400 !important;
+}
+.ekran{
+    font-size: 20px !important;
+    font-weight: 600 !important;
+}
+
 
 @media only screen and (min-width: 768px) {
     #iph-15-x{
