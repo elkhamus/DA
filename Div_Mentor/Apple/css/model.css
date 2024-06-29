@@ -45,16 +45,8 @@
     transform: translate(0, -9.6px);
 } */
 
-.bg-boz{ background-color: #f2f2f2;}
-.bg-gri{ background-color: #f9f9f9 !important;}
-.fs14px{ font-size: 14px;}
-.mb-10px{margin-bottom: 0px !important;}
-.mb-18px{margin-bottom: 18px !important;}
-.mb-30px{margin-bottom: 30px !important;}
-.over-h{ overflow: hidden;}
-a:hover{
-    text-decoration: underline !important;
-}
+body {
+
 ul{
     list-style: none;
 }
@@ -185,7 +177,8 @@ ol{
 .item-10{
     height: 130px;
 }
-#ways-to-save h2 , #feature h2{
+#ways-to-save h2 , 
+#feature h2 {
     font-size: 2em;
     font-weight: 600;
     margin-bottom: 43px;
@@ -213,7 +206,7 @@ ol{
     font-size: 1.5em;
     font-weight: 600;
 }
-#card-2 span{
+#card-2 span {
     font-size: 12px;
     font-weight: 600;
     color: rgb(110, 110, 115);
@@ -703,4 +696,5 @@ footer{
         font-size: 48px !important;
         font-weight: 600 !important;
     }
+}
 }
