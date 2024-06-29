@@ -1,0 +1,266 @@
+@media only screen and (min-width: 734px) {
+    #grid-1{
+        display: grid;
+        max-width: 734px;
+        margin: auto;
+        gap: 10px;
+        grid-template-columns: 362px 362px;
+        grid-template-rows: auto auto auto;
+    }
+    .wrapper5{
+        max-width: 734px;
+        margin: auto;
+    }
+    #card-1{
+        grid-area: 1 / 1 / 2 / 3;
+    }
+    #card-2{
+        max-height: 600px;
+        padding: 50px 0 !important;
+    }
+    #card-3{
+        max-height: 600px;
+        padding: 0;
+    }
+    #card-4{
+        grid-area: 3 / 1 / 4 / 3;
+    }
+    #feature-cnt1, #feature-cnt2, #feature-cnt3{
+        max-width: 734px;
+        margin: auto;
+        overflow: hidden;
+    }
+    #feature-img1{
+        background: url('../img/a12.jpg');
+        background-size: 349px 273px;
+        width: 349px;
+        margin: auto;
+        height: 273px;
+    }
+    #feature-img2{
+        background: url('../img/a13.jpg')center;
+        background-repeat: no-repeat;
+        background-size: 427px 378px;
+        width: 427px;
+        margin: auto;
+        height: 378px;
+    }
+    #feature-img3{
+        background: url('../img/a14.jpg')no-repeat;
+        height: 500px;
+        background-position: center 90%;
+    }
+    #what-makesimg1{
+        background: url('../img/a15.jpg')no-repeat;
+        height: 514px;
+        background-size: 736px 514px;
+        width: 736px;
+    }
+    .what{
+        min-height: 460px !important;
+    }
+    #what-makesimg3{
+        height: 460px;
+    }
+    #get-more h2, #what-makes h2{
+        font-size: 56px;
+    }
+    #grid-2{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto;
+    }
+    #one{
+        grid-area: 1 / 1 / 2 / 3;
+    }
+    #fitness{
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    #arcade {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    #intro{
+        grid-area: 4 / 1 / 5 / 3;
+    }
+    .farc{
+        height: 500px;
+        overflow: hidden !important;
+    }
+    #newsimg{
+        background: url('../img/a16.jpg');
+        background-size: 360px 490px;
+        height: 300px;
+        width: 100%;
+        background-position: 50% 130%;
+    }
+    #giftimg{
+        background: url('../img/a17.jpg')no-repeat;
+        background-size: 358px 169px;
+        height: 247px;
+    }
+}
+@media only screen and (min-width: 1068px) {
+    .wrapper1{
+        max-width: 90%;
+        margin: auto;
+    }
+    #grid-1{
+        display: grid;
+        max-width: 100% ;
+        gap: 10px;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+    }
+    .wrapper5{
+        max-width: 100%;
+    }
+    #feature-cnt1, #feature-cnt2, #feature-cnt3{
+        max-width: 100%;
+    }
+    #grid-img1{
+        background-position: 50% 100%;
+        background-size: auto;
+    }
+    #grod-img2{
+        background-size: cover;
+        background-position: -50% 0%;    
+    }
+    #card-1{
+        grid-area: 1 / 1 / 2 / 2 ;
+    }
+    #card-1, #card-2, #card-3{
+        max-height: 600px;
+    }
+    #card-4 {
+        grid-area: 2 / 1 / 3 / 4;
+    }
+    .wrapper2{
+        overflow: hidden;
+    }
+    #feature-img1{
+        background: url('../img/a18.jpg');
+        background-size: 633px 463px;
+        width: 633px;
+        margin: auto;
+        height: 463px;
+    }
+    #feature-img2{
+        background: url('../img/a19.jpg')center;
+        background-repeat: no-repeat;
+        background-size: 806px 531px;
+        width: 806px;
+        margin: auto;
+        height: 531px;
+    }
+    #feature-img3{
+        background: url('../img/a20.jpg')no-repeat;
+        height: 700px;
+        width: 1063px;
+        margin: auto;
+        background-size: 1063px 500px;
+        background-position: center 90%;
+    }
+    #what-makesimg1{
+        background: url('../img/a21.jpg')no-repeat;
+        height: 560px;
+        background-size: cover;
+        width: 100%;
+        margin: auto;
+        background-position: bottom;
+    }
+    #what-makes h3{
+        font-size: 3em;
+    }
+    .what{
+        min-height: 500px !important;
+    }
+    #what-makesimg3{
+        height: 500px;
+    }
+    .px227{
+        height: 227px;
+        width: 227px;
+    }
+    .px105{
+        height: 105px;
+        width: 105px;
+    }
+    #grid-3{
+        height: 350px;
+    }
+   .farc{
+        height: 550px !important;
+    }
+    #newsimg{
+        background: url('../img/a22.jpg');
+        background-size: 675px 590px;
+        height: 320px;
+        width: 100%;
+        background-position: 50% 100%;
+    }
+    #giftimg{
+        background: url('../img/a23.jpg')no-repeat;
+        background-size: 675px 319px;
+        height: 319px;
+    }
+    .intro h3{
+        font-size: 48px;
+    }
+    #introimg{
+        background: url('../img/a24.jpg');
+        background-size: 766px 388px;
+        width: 766px;
+        height: 388px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .orta{
+        border-bottom: 1px solid #00000029;
+        margin-bottom: 10px;
+    }
+    .get-iphone{
+        max-width: 50%;
+        margin: auto;
+        font-size: .95em !important;
+    }
+    .from-i15{
+        font-size: 1.4em !important;
+    }
+    #iph-15-x{
+        display: initial;
+    }
+    #iph-15-y{
+        display: none;
+    }
+    .vh-lg-100{
+        height: 100vh;
+    }
+    .position-lg-absolute{
+        position: absolute;
+    }
+    #iphone-15bg{
+        height: 300px;
+        background-size: auto;
+    }
+    #iphone15{
+        border-bottom: 10px solid #eee;
+    }
+    #qaqa{
+        border-radius: 50px;
+    }
+    #mob-guide {
+        display: none;
+    }
+    #des-guide{
+        display: initial !important;
+    }
+    #des-guide h5{
+        font-size: 30px !important;
+        font-weight: 600 !important;
+    }
+    #des-guide h3{
+        font-size: 48px !important;
+        font-weight: 600 !important;
+    }
+}
