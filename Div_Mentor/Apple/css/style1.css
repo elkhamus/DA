@@ -20,7 +20,7 @@ header, nav, main, footer {
 .item-8 { height: 135px; }
 .item-9 { height: 157px; }
 .item-10 { height: 130px; }
-ul, ol {
+ul {
     list-style: none;
 }
 #navbarSupportedContent a {
