@@ -2,6 +2,9 @@
     font-size: 18px !important;
     font-weight: 400 !important;
 }
+header, main, footer {
+    overflow-x: hidden !important;
+}
 .ekran {
     font-size: 20px !important;
     font-weight: 600 !important;
