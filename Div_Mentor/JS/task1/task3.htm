@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Task 3</title>
+        <style>
+            input {
+                margin: 30px;
+                
+            }
+            #a1, #a2, #a3 {
+                    width: 50px;
+                    margin: 10px;
+                }
+            p {
+                margin: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <input type="text" id="inp1" />
+            <button onclick="change()"> <=> </button>
+            <input type="text" id="inp2" />
+        </div>
+        <div>
+            <input type="text" value="2" id="a1">
+            <input type="text" value="3" id="a2">
+            <input type="text" value="4" id="a3">
+            <button onclick="calc()">Calc</button>
+            <p id="add"></p>
+            <p id="avg"></p>
+            <p id="mult"></p>
+        </div>
+
+
+
+
+        <script>
+            let inp1 = document.getElementById('inp1');
+            let inp2 = document.getElementById('inp2');
+            let a1 = document.getElementById('a1');
+            let a2 = document.getElementById('a2');
+            let a3 = document.getElementById('a3');
+            let add = document.getElementById('add');
+            let avg = document.getElementById('avg');
+            let mult = document.getElementById('mult');
+            function change() {
+                let a = inp1.value;
+                inp1.value = inp2.value;
+                inp2.value = a;
+            }
+            function calc () {
+                add.innerHTML = "Cem: " + (+a1.value + +a2.value + +a3.value);
+                avg.innerHTML = "Orta: " + (+a1.value + +a2.value + +a3.value) / 3;
+                mult.innerHTML = "Hasil:" + (a1.value * a2.value * a3.value);
+            }
+
+
+        </script>
+    </body>
+</html>

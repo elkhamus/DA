@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Task 2</title>
+        <style>
+            button {
+                width: 100px;
+                height: 50px;
+                font-size: 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                position: relative;
+                left: 100px;
+                top: 100px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <button id="btn" onmousemove="random()">Catch me!</button>
+        </div>
+
+
+
+
+
+
+
+        <script>
+            let btn = document.getElementById('btn');
+            
+            function random() {
+                let x = Math.floor(Math.random() * 500);
+                let y = Math.floor(Math.random() * 500);
+                btn.style.left = `${x}px`;
+                btn.style.top = `${y}px`;
+            }
+        </script>
+    </body>
+</html>
