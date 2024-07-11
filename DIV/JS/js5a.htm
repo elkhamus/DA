@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            input {
+                width: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" id="a">
+        <input type="text" id="b">
+         <button onclick="ok()">OK</button>
+         <h1></h1>
+
+
+
+
+
+
+        <script>
+            const a = document.getElementById('a');
+            const b = document.getElementById('b');
+            const h1 = document.querySelector('h1');
+            function ok() {
+                if (b.value >=17 && a.value + b.value >= 50) {
+                    let x = +a.value + +b.value;
+                    h1.innerHTML = `Kecdin balin ${x}`;
+                } else if (b.value < 17) {
+                    h1.innerHTML = 'Kesildin';
+                }
+            }
+
+        </script>
+    </body>
+</html>
