@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" id="ad" placeholder="adiniz">
+        <input type="number" name="" id="saat" style="width: 30px;">
+        <fieldset style="border: none;">
+            <input type="radio" name="sex" id="m" checked="checked">k
+            <input type="radio" name="sex" id="f">q
+            <button onclick="yoxla()">ok</button>
+            <h1 id="msg"></h1>
+        </fieldset>
+
+
+
+
+        <script>
+            const ad = document.getElementById('ad');
+            const m = document.getElementById('m');
+            const f = document.getElementById('f');
+            const msg = document.getElementById('msg');
+            let saat = document.getElementById('saat');
+            function yoxla(){
+
+                xitab = m.checked ? "bey" : "xanim"
+                msg.innerHTML = `Salam ${saat} ${ad.value} ${xitab}!`
+            }
+
+
+
+        </script>
+    </body>
+</html>

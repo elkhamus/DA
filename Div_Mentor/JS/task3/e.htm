@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        input, button{
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+    <input id="a" type="number">x <sup>2</sup>+
+    <input id="b" type="number">x+
+    <input id="c" type="number">
+    <button onclick="ok()">=</button>
+    <span>0</span>
+    <div id="ntc"></div>
+
+
+    <script>
+        const a = document.getElementById('a');
+        const b = document.getElementById('b');
+        const c = document.getElementById('c');
+        const ntc = document.getElementById('ntc');
+        function ok() {
+            const delta = Math.pow(b.value, 2) - 4 * a.value * c.value;
+            ntc.innerHTML = delta < 0 ? 'Kok yoxdur' : delta == 0 ? `x = ${-b.value / (2 * a.value)}` : `x <sub>1</sub> = ${(-b.value + Math.sqrt(delta)) / (2 * a.value)} <br/> x <sub>2</sub> = ${(-b.value - Math.sqrt(delta)) / (2 * a.value)}`
+            // if (delta < 0) {
+            //     ntc.innerHTML = 'Kok yoxdur';
+            // } else if (delta == 0) {
+            //     ntc.innerHTML = `x = ${-b.value / (2 * a.value)}`;
+            // } else {
+            //     ntc.innerHTML = `x <sub>1</sub> = ${(-b.value + Math.sqrt(delta)) / (2 * a.value)} <br/> x <sub>2</sub> = ${(-b.value - Math.sqrt(delta)) / (2 * a.value)}`;
+            // }
+        }
+
+    </script>
+</body>
+</html>

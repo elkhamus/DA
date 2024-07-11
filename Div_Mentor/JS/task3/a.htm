@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" id="a">
+        <button onclick="yoxla()">ok</button>
+        <div id="b" style="width: 400px; height: 400px; margin: 10px; background: red;"></div>
+<script>
+    const a = document.getElementById('a');
+    const b = document.getElementById('b');
+    function yoxla() {
+        b.style.background = a.value%2 ? 'red' : 'green';
+    }
+
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+        <input type="text" id="a">
+        <button onclick="add()">OK</button>
+    </div>
+    <div id="div">
+    
+    </div>
+    <script>
+		const a = document.getElementById('a');
+        const p = document.querySelector('#div');
+        let onOff = false;
+        let x = 0
+        function add() {
+            x++    
+            p.innerHTML += `<p><input id="c${x}" value="${a.value}" type="text" disabled="disabled"><button style="margin-left: 5px" onclick="red(${x})">🖉</button></p>`
+        }
+        function red(x) {
+            const c = document.getElementById('c'+ x);
+            c.disabled = onOff;
+            onOff = !onOff;
+        }
+    </script>
+</body>
+
+</html>

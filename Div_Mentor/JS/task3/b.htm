@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <p id="a">Lorem ipsum dolor sit amet.</p>
+        <button onclick="ok('b')"><strong>B</strong></button>
+        <button onclick="ok('u')"><u>U</u></button>
+        <button onclick="ok('i')"><i>K</i></button>
+
+
+
+
+        <script>
+            const a = document.getElementById('a');
+            function ok(x) {
+                a.style.fontWeight = x == 'b' ? a.style.fontWeight == 'bold' ? 'normal' : 'bold' : a.style.fontWeight;
+                a.style.textDecoration = x == 'u' ? a.style.textDecoration == 'underline' ? 'none' : 'underline' : a.style.textDecoration;
+                a.style.fontStyle = x == 'i' ? a.style.fontStyle == 'italic' ? 'normal' : 'italic' : a.style.fontStyle;
+            }
+
+
+        </script>
+    </body>
+</html>
