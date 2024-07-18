@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <select id="il"></select>        
+
+
+
+
+        <script>
+            const il = document.getElementById('il')
+            let kod = ''
+            for (let i = 2024; i >= 1905;i--)
+            {
+                kod += `<option>${i}</option>`
+            }
+            il.innerHTML = kod
+
+
+
+        </script>
+    </body>
+</html>

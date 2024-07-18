@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <select id="sec" onchange="vur()"></select>
+        <div id="show"></div>
+        
+
+        <script>
+            const sec = document.getElementById('sec')
+            const show = document.getElementById('show')
+            let kod = ''
+            for (let i = 1; i <= 10; i++) {
+                kod += `<option>${i}</option>`
+            }
+            sec.innerHTML = kod
+            function vur(){
+                let kod = ''
+                for (let i = 1; i <= 10; i++) {
+                    kod += `${i} x ${sec.value} = ${sec.value * i}<br />`
+                }
+                show.innerHTML = kod
+            }
+
+        </script>
+    </body>
+</html>
