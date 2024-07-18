@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <style>
+        input {
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+        }
+        button {
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+        }
+        span {
+            font-size: 20px;
+        }
+        
+    </style>
+    <body>
+        <input id="inp1" type="number">
+        <input id="inp2" type="number">
+        <button onclick="ok()">OK</button>
+        <span id="ans"></span>
+
+
+
+        <script>
+            const inp1 = document.getElementById('inp1');
+            const inp2 = document.getElementById('inp2');
+            const ans = document.getElementById('ans');
+            function ok() {
+                let kod = "1"
+                
+                for (let i = 1 + +inp2.value; i <=inp1.value; i = i + +inp2.value) {
+                    kod += `,${i}`
+                }
+                ans.innerHTML = kod
+            }
+
+        </script>
+    </body>
+</html>

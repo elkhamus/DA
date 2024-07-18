@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <style>
+        input {
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+        }
+        button {
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+        }
+    
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+            margin: 10px;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 10px;
+        
+        }
+
+        
+    </style>
+    <body>
+        <input id="inp" type="number">
+        <button onclick="ok()">OK</button>
+        <table>
+            <tr id="tr" >
+
+            </tr>
+        </table>
+
+
+
+        <script>
+            const inp = document.getElementById('inp');
+            const tr = document.getElementById('tr');
+            function ok() {
+                let kod = ``
+                for (let i = inp.value; i >= 1; i--) {
+                    kod += `<td>${i}</td>`
+                }
+                tr.innerHTML = kod
+            }
+
+        </script>
+    </body>
+</html>

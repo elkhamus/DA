@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <style>
+input {
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+        }
+        button {
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+        }
+        span {
+            font-size: 20px;
+        }
+        
+    </style>
+    <body>
+        <input type="number" id="inp">
+        <button onclick="ok()">OK</button>
+        <span id="ans"></span>
+
+
+
+
+        <script>
+            const inp = document.getElementById('inp')
+            const ans = document.getElementById('ans')
+            function ok() {
+                let kod = inp.value
+                for (let i = inp.value *2; i <=50; i = i + +inp.value) {
+                    kod += `,${i}`
+                }
+
+                ans.innerHTML = kod
+            }
+
+
+        </script>
+    </body>
+</html>

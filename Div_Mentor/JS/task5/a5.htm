@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <style>
+        button {
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+        }
+        span {
+            font-size: 20px;
+        }   
+        
+    </style>
+    <body>
+        <button onclick="ok()">OK</button>
+        <span></span>
+
+
+        <script>
+            const span = document.querySelector('span')
+            function ok() {
+                let kod = '1'
+                for (let i = 2; i <=7; i++) {
+                    kod += `+${i}`
+                }
+                span.innerHTML = eval(kod)
+            }
+
+
+        </script>
+    </body>
+</html>
