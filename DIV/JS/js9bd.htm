@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" name="" id="a">
+        <button onclick="ok()">OK</button>
+        <div id="todos"></div>
+
+
+
+
+
+        <script>
+            const a = document.getElementById("a")
+            const todos = document.getElementById("todos")
+            let todo = []
+            function ok() {
+                todo.push(a.value)
+                todos.innerHTML = ''
+                a.value = ''
+                for (let i = 0; i < todo.length; i++) {
+                    todos.innerHTML += `<p>${todo[i]}</p>`
+                }
+            }
+
+        </script>
+    </body>
+</html>

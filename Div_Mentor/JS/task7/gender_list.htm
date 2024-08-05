@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #list {
+            display: flex;
+
+            div {
+                margin: 20px;
+
+
+            }
+        }
+
+        button {
+            display: inline;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="addname" placeholder="Ad daxil edin">
+    <input type="radio" name="sex" id="m">Kisi
+    <input type="radio" name="sex" id="f">Qadin
+    <button onclick="ok()">Elave et</button>
+    <div id="list">
+        <ol id="mlist"></ol>
+        <ol id="flist"></ol>
+    </div>
+
+
+    <script>
+         const input = document.querySelector('#addname');
+        const mlist = document.querySelector('#mlist');
+        const flist = document.querySelector('#flist');
+        const m = document.querySelector('#m');
+        const f = document.querySelector('#f');
+        let mArr = [];
+        let fArr = [];
+        let mChange = 0
+        let fChange = 0
+        let kod = ''
+        function render() {
+            if (mChange != mArr.length) {
+                kod = ''
+                kod += `<h1>Kisiler: (${mArr.length})-nefer</h1>`
+                for (let i = 0; i < mArr.length; i++) {
+                    kod += `<li>${mArr[i]}<button onclick="del('m',${i})">Delete</button></li>`
+                }
+                mlist.innerHTML = kod
+            }
+            if (fChange != fArr.length) {
+                kod = ''
+                kod += `<h1>Qadinlar: (${fArr.length})-nefer</h1>`
+                for (let i = 0; i < fArr.length; i++) {
+                    kod += `<li>${fArr[i]}<button onclick="del('f',${i})">Delete</button></li>`
+                }
+                flist.innerHTML = kod
+
+            }
+        }
+        
+        function ok() {
+            let name = input.value 
+            name = name[0].toUpperCase() + name.slice(1)
+            if (name == '') {
+                alert('Ad daxil edin')
+            }
+            else if (m.checked) {
+                input.value = ''
+                mChange = mArr.length
+                mArr.push(name)
+                mArr.sort()
+                render()
+            } else if (f.checked) {
+                input.value = ''
+                fChange = fArr.length
+                fArr.push(name)
+                fArr.sort()
+                render()
+            } else {
+                alert('Cins secin')
+            }
+        }
+
+
+        function del(x, y) {
+            if (x == 'm') {
+                mChange = mArr.length
+                mArr.splice(y, 1)
+                render()
+            } else if (x == 'f') {
+                fChange = fArr.length
+                fArr.splice(y, 1)
+                render()
+            }
+        }
+    </script>
+</body>
+
+</html>

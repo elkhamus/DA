@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            body {display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;}
+            table { border-collapse: collapse; font: bold 1.6em Arial;}
+            td {width: 50px; height: 50px; text-align: center; border: 2px solid #000;}
+
+            
+
+
+        </style>
+    </head>
+    <body>
+        <table id="oyun"></table>
+
+
+
+
+
+        <script>
+            const table = document.getElementById("oyun")
+            let kod = ''
+            for (let i = 1; i <= 4; i++) {
+                kod += '<tr>'
+                for (let j = 1; j <= 4; j++) { 
+                    kod += `<td></td>`
+                }
+                kod += '</tr>'
+            }
+            table.innerHTML = kod
+
+
+
+        </script>
+    </body>
+</html>

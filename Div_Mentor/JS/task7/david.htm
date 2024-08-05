@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+       <input type="text" id="in1">
+       <button onclick="addBefore()">Add Before</button>
+       <button onclick="addAfter()">Add After</button>
+       <input type="text" id="in2">
+       <button onclick="del()">Remove</button>
+       <div id="div"></div>
+        
+
+
+
+        <script>
+            const in1 = document.getElementById('in1');
+            const in2 = document.getElementById('in2');
+            const div = document.getElementById('div');
+            let arr = ['Kia', 'Honda', 'BMW']
+
+            function addAfter() {
+                arr.push(in1.value)
+                div.innerHTML = arr
+            }
+            function addBefore() {
+                arr.unshift(in1.value)
+                div.innerHTML = arr
+            }
+            function del() {
+                arr.splice(in2.value, 1)
+                div.innerHTML = arr
+            }
+            div.innerHTML = arr
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <style>
+        table {border-collapse: collapse;margin:10vh auto;text-align: center;}
+        td {width: 100px;height: 100px; border:1px solid #333;}
+    </style>
+    <body>
+        <table id="cdv"></table>
+
+
+
+        <script>
+            const cdv = document.getElementById('cdv')
+            let arr = []
+            let kod = ''
+            for (let i = 1; i <= 16; i++) {
+                arr.push(i)
+            }
+            for (let i = 0;i <4; i++) {
+                kod += `<tr>`
+                for (let j = 0; j < 4; j++) {
+                    kod += `<td>${arr[4*i+j]}</td>`
+                }
+                kod += `</tr>`
+            }
+            cdv.innerHTML = kod
+
+
+
+            function rnd(min, max){
+                return Math.floor(Math.random() * (max - min + 1)) + min
+            }
+        </script>
+    </body>
+</html>

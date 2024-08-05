@@ -1,0 +1,76 @@
+<!DOCTYPE html>                     
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            table { border-collapse: collapse; font: bold 1.6em Arial;}
+            td {width: 50px; height: 50px; text-align: center;}
+            .black { background: orange;}
+            .white { background: yellow;}
+        </style>
+    </head>
+    <body>
+        <select id="letter"></select>
+        <select id="number"></select>
+        <button onclick="ok()">Ok</button>
+        <table id="chess"></table>
+        
+        <script>
+            const chess = document.getElementById("chess")
+            const letter = document.getElementById("letter")
+            const number = document.getElementById("number")
+
+            let row = 1 
+            let col = 2
+            let abc = ' ABCDEFGH'
+            let kod = ''
+            for (let i = 1; i <= 8; i++) {
+                let option = document.createElement('option')
+                option.value = i
+                option.text = i
+                number.add(option)
+            }
+            for (let i = 1; i <= 8; i++) {
+                let option = document.createElement('option')
+                option.value = abc[i]
+                option.text = abc[i]
+                letter.add(option)
+            }
+            for (let i = 0; i <= 8; i++) {
+                kod += '<tr>'
+                for (let j = 0; j <= 8; j++) {
+                    let color = (i == 0 || j == 0) ? '' :
+                                (i + j) % 2 ? 'black' : 'white' 
+                    let cell =  i == 0 ?  abc[j] : 
+                                j == 0 ? i : 
+                                i == row && j == col ? '♞' : ''
+                    kod += `<td class="${color}">${cell}</td>`
+                }
+                kod += '</tr>'
+            }
+            function ok() {
+                row = number.value
+                col = abc.indexOf(letter.value)
+                kod = ''
+                for (let i = 0; i <= 8; i++) {
+                    kod += '<tr>'
+                    for (let j = 0; j <= 8; j++) {
+                        let color = (i == 0 || j == 0) ? '' :
+                                    (i + j) % 2 ? 'black' : 'white' 
+                        let cell =  i == 0 ?  abc[j] : 
+                                    j == 0 ? i : 
+                                    i == row && j == col ? '♞' : ''
+                        kod += `<td class="${color}">${cell}</td>`
+                    }
+                    kod += '</tr>'
+                }
+                chess.innerHTML = kod
+            }
+            chess.innerHTML = kod
+
+            
+        
+        </script>
+    </body>
+</html>

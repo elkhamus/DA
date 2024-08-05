@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="inp">
+    <button onclick="ok()">OK</button>
+    <div id="cap">
+
+    </div>
+    <div id="color">
+
+    </div>
+
+
+
+    <script>
+        const inp = document.querySelector('#inp');
+        const cap = document.querySelector('#cap');
+        const color = document.querySelector('#color');
+        let kod = ''
+        function ok() {
+            name = inp.value.toLowerCase()
+            for (let i = 0; i < name.length; i++) {
+                kod += `<h1>${name.slice(0, i) + name[i].toUpperCase() + name.slice(i + 1)}</h1>`
+            }
+            cap.innerHTML = kod
+        }
+    </script>
+</body>
+
+</html>
