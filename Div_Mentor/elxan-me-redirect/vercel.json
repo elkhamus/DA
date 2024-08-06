@@ -1,0 +1,9 @@
+{
+    "redirects": [
+      {
+        "source": "/",
+        "destination": "https://www.linkedin.com/in/elkhanmustafayev",
+        "permanent": true
+      }
+    ]
+  }
