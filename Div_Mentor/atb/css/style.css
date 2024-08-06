@@ -479,8 +479,6 @@ body {
 
 }
 #calc-main-desktop-extra .pst{
-    -webkit-appearance:none;
-    appearance: none;
     cursor: pointer var(--purple);
     color: var(--purple);
     position: absolute;
