@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8" />
         <title>Document</title>
     </head>
     <body>
-        <input type="number" id="x">
+        <input type="number" id="x" />
         <button onclick="yoxla()">ok</button>
         <span id="ntc"></span>
-        
 
         <script>
-            const x = document.getElementById('x');
-            const ntc = document.getElementById('ntc');
+            const x = document.getElementById("x")
+            const ntc = document.getElementById("ntc")
 
             function yoxla() {
-                if (x.value%2 == 0) {
-                    ntc.innerHTML = "cutdur"
-                } else {
-                    ntc.innerHTML = "tekdir"
-                }
-            }
+                ntc.innerHTML = x.value % 2 ? "təkdir" : "cütdür"
 
-
+                // if(x.value % 2)  ntc.innerHTML = "təkdir"
+                // else             ntc.innerHTML = "cütdür"
+            }   
         </script>
     </body>
 </html>

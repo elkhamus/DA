@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8" />
         <title>Document</title>
         <style>
-            input {width: 30px;
-            text-align: left;}
-
+            input { width: 40px; text-align: right;}
         </style>
     </head>
     <body>
-        <input type="number" id="a">/
-        <input type="number" id="b">
-        <button>=</button>
-        <span id="ntc"></span>
-
-
-
-
+        <input id="bolunen" type="number" /> /
+        <input id="bolen" type="number" />
+        <button onclick="bol()"> = </button>
+        <span id="netice"></span>
 
         <script>
-            let a = document.getElementById('a')
-            let b = document.getElementById('b')
-            let ntc = document.getElementById('ntc')
-            let btn = document.querySelector('button')
-            btn.onclick = function() {
-                let ntc1 = (a.value/b.value).toFixed(0);
-                let ntc2 = (a.value%b.value);
-                ntc.innerHTML = ntc1 + ',qaliq ' + ntc2;
+            const bolunen = document.getElementById("bolunen")
+            const bolen = document.getElementById("bolen")
+            const netice = document.getElementById("netice")
 
-
+            function bol() {
+                let qaliq =  Math.abs(bolunen.value % bolen.value)
+                // let qismet = (bolunen.value - qaliq) / bolen.value
+                let qismet = Math.trunc(bolunen.value / bolen.value)
+                
+                netice.innerHTML = `${qismet}, qalıq ${qaliq}`
             }
 
+            // let ad = "Yusif"
+            // let txt = 'Hi, '
+            // let msg = `<h1>Salam, ${ad}</h1>`
+
+            // console.log(txt + ad)
+            // document.write(msg)
         </script>
     </body>
 </html>

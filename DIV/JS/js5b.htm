@@ -3,42 +3,30 @@
     <head>
         <meta charset="UTF-8">
         <title>Document</title>
-        <style>
-
-
-        </style>
     </head>
     <body>
-        <p><input type="text" id="name" placeholder="ad"></p>
-        <p><input type="number" id="age" placeholder="yas"></p>
+        <p><input type="text" id="name" placeholder="Ad" /></p>
+        <p><input type="number" id="age" placeholder="Yas" /></p>
         <p>
-            <input type="radio" name="sex" id="m">Kisi
-            <input type="radio" name="sex" id="f">Qadin
+            <input type="radio" name="sex" id="m" checked="checked">Kişi
+            <input type="radio" name="sex" id="f">Qadın
         </p>
-        <p><button onclick="ok()">OK</button></p>
+        <p><button onclick="sayHi()">Ok</button></p>
         <h1 id="msg"></h1>
 
-
         <script>
-            const name = document.getElementById('name');
-            const age = document.getElementById('age');
-            const m = document.getElementById('m');
-            const f = document.getElementById('f');
-            const msg = document.getElementById('msg');
+            const name = document.getElementById("name")
+            const age = document.getElementById("age")
+            const m = document.getElementById("m")
+            const f = document.getElementById("f")
+            const msg = document.getElementById("msg")
 
-            function ok() {
-                if (age.value >= 25 && m.checked) {
-                    msg.innerHTML = `Salam ${name.value} Bey!`;
-                }
-                else if (f.checked) {
-                    msg.innerHTML = `Salam ${name.value} Xanim!`;
-                }
-                else {
-                    msg.innerHTML = `Salam ${name.value}!`;
-                }
+            function sayHi() {
+                if (f.checked || age.value >= 25) {
+                    let title = m.checked ? 'bəy' : 'xanım'
+                    msg.innerHTML = `Hər vaxtınız xeyir, ${name.value} ${title}`
+                } else msg.innerHTML = `Salam, ${name.value}`
             }
-
-
         </script>
     </body>
 </html>

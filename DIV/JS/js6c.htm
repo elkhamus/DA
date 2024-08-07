@@ -5,20 +5,17 @@
         <title>Document</title>
     </head>
     <body>
-        <div id="vur"></div>
-
-
-
-
-
+        <div id="mult"></div>
 
         <script>
-            const vur = document.getElementById('vur')
+            const mult = document.getElementById("mult")
             let kod = ''
-            for (let i = 1; i <=10;i++){
-                kod += `<p>${i} x 2 = ${2 * i}</p>`
+
+            for (let i = 1; i <= 9; i++) {
+                kod += `${i} x 2 = ${2 * i}<br />`
             }
-            vur.innerHTML = kod
+
+            mult.innerHTML = kod
         </script>
     </body>
 </html>

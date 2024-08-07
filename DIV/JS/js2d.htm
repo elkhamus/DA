@@ -2,41 +2,37 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <style>
-            input {width: 30px;}
+            input { width: 30px;}
         </style>
     </head>
     <body>
-        <input type="text" id="x">
-        <input type="text" id="y">
+        <input type="text" id="x" />
+        <input type="text" id="y" />
         <div>
-            <button onclick="add()">Cem</button>
-            <button onclick="multi()">Hasil</button>
-            <button onclick="ededOrta()">EO</button>
+            <button onclick="topla()">Cem</button>
+            <button onclick="vur()">Hasil</button>
+            <button onclick="hesabla()">Ə.O.</button>
         </div>
         <p id="ntc"></p>
 
-
-
-
-
-
         <script>
-            let x = document.getElementById('x')
-            let y = document.getElementById('y')
-            let ntc = document.getElementById('ntc')
-            function add() {
-                ntc.innerHTML = +x.value + +y.value
-            }
-            function multi() {
-                ntc.innerHTML = +x.value * +y.value
-            }
-            function ededOrta() {
-                ntc.innerHTML = (+x.value + +y.value) / 2
+            let x = document.getElementById("x")
+            let y = document.getElementById("y")
+            let ntc = document.getElementById("ntc")
+
+            function topla() {
+                ntc.innerHTML = "Cem: " +x.value + +y.value
             }
 
+            function vur() {
+                ntc.innerHTML = "Hasil: " + x.value * y.value
+            }
+
+            function hesabla() {
+                ntc.innerHTML = "Ədədi orta: " + (+x.value + +y.value) / 2
+            }
         </script>
     </body>
 </html>

@@ -2,38 +2,32 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <style>
-            input {width: 30px;}
+            input { width: 30px;}
         </style>
     </head>
     <body>
-        <input id="a1" type="number" /> 
+        <input type="number" id="a1" /> 
         <select id="op">
             <option>+</option>
             <option>-</option>
             <option>*</option>
             <option>/</option>
         </select>
-        <input id="a2" type="number" />
-        <button onclick="topla()"> = </button>
+        <input type="number" id="a2" />
+        <button onclick="hesabla()"> = </button>
         <span id="ntc"></span>
 
-
-
         <script>
-            let a1 = document.getElementById('a1')
-            let a2 = document.getElementById('a2')
-            let op = document.getElementById('op')
-            let ntc = document.getElementById('ntc')
-            
-            function topla(a1) {
-                 ntc.innerHTML = eval(a1.value + op.value + a2.value )
-                 console.log(ntc.innerHTML)
+            let a1 = document.getElementById("a1")
+            let a2 = document.getElementById("a2")
+            let op = document.getElementById("op")
+            let ntc = document.getElementById("ntc")
+
+            function hesabla() {
+                ntc.innerHTML = eval(a1.value + op.value + a2.value)
             }
-
-
         </script>
     </body>
 </html>

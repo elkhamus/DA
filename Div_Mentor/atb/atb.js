@@ -180,6 +180,7 @@ function exchange() {
     input2.innerHTML = ((input1.value * select1.value) / select2.value).toFixed(2);
 
 }
+exchange()
 
 //  D E S K T O P 
 const mebleg = document.querySelector('#mebleg')
@@ -240,6 +241,8 @@ function birinci(){ // Mebleg input onchange
      em3 = em1 / inputAy.value
     pul.innerHTML = em3.toFixed(0)
 }
+birinci()
+birinciay()
 function birinciay(){ // ay input onchange
     pstFaiz.value = parseInt(inputAy.value)
     if(inputAy.value <=12){
@@ -418,3 +421,7 @@ function fnc2(){
     emanetFaiz.innerHTML = qa + ' % -'
 }
 fnc2()
+const xqoy = document.querySelector('#xqoy')
+function xqoy1() {
+    xqoy.style.backgroundColor == 'initial' ? xqoy.style.backgroundColor = '#888' : xqoy.style.backgroundColor = 'initial'
+}

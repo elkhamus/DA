@@ -3,34 +3,30 @@
     <head>
         <meta charset="UTF-8" />
         <title>Document</title>
+        <style>input { width: 40px; text-align: right;}</style>
     </head>
-    <style>
-
-
-
-    </style>
     <body>
-        <input type="text" id="n">
+        <input type="text" id="n" />
         <button onclick="yoxla()">OK</button>
         <span id="ntc"></span>
 
-
-
-
-
         <script>
-            const n = document.getElementById('n');
-            const ntc = document.getElementById('ntc');
+            const n = document.getElementById("n")
+            const ntc = document.getElementById("ntc")
 
             function yoxla() {
-                if(n < 0) ntc.innerHTML = "menfi"
-                else if(n.value == 0) {"sifir"
+                ntc.innerText = n.value < 0 ? "Mənfi" :
+                                n.value == 0 ? "Sıfır" : "Müsbət"
+                /*
+                if(n.value < 0) {
+                    ntc.innerText = "Mənfi"
+                } else if(n.value == 0) {
+                    ntc.innerHTML = "Sıfır"
                 } else {
-                    ntc.innerHTML = "musbet"}
+                    ntc.innerHTML = "Müsbət"
+                }
+                */
             }
-
-
-
         </script>
     </body>
 </html>
