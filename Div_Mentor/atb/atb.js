@@ -425,3 +425,6 @@ const xqoy = document.querySelector('#xqoy')
 function xqoy1() {
     xqoy.style.backgroundColor == 'initial' ? xqoy.style.backgroundColor = '#888' : xqoy.style.backgroundColor = 'initial'
 }
+function f5() {
+    location.reload()
+}
