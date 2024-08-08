@@ -427,3 +427,19 @@ function xqoy1() {
 function f5() {
     location.reload()
 }
+const chatOpen = document.querySelector('#chat')
+const chatCloser = document.querySelector('#chatCloser')
+const chatW = document.querySelector('#chatW')
+const chatF = document.querySelector('#chatF')
+function chatOpener() {
+    chatOpen.style.visibility = 'hidden'
+    chatCloser.style.visibility = 'visible'
+    chatW.style.visibility = 'visible'
+    chatF.style.visibility = 'visible'
+}
+function chatClose() {
+    chatCloser.style.visibility = 'hidden'
+    chatW.style.visibility = 'hidden'
+    chatF.style.visibility = 'hidden'
+    chatOpen.style.visibility = 'visible'
+}

@@ -45,11 +45,74 @@ h5{
     color: #fff;
     height: 62px;
     width: 62px;
-    display: flex;
+    visibility: visible;
     justify-content: center;
     align-items: center;
     border-radius: 100px;
     z-index: 100;
+}
+#chatCloser{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    background-image: url(../img/ic-close.png);
+    background-position: 50% 50%;
+    background-size: 20%;
+    background-repeat: no-repeat;
+    color: #fff;
+    height: 62px;
+    width: 62px;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    z-index: 100;
+}
+#chatW {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background-color: green;
+    background-image: url(../img/whatsapp.png);
+    background-position: 50% 50%;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    color: #fff;
+    height: 62px;
+    width: 62px;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    z-index: 100;
+}
+#chatF {
+    position: fixed;
+    bottom: 160px;
+    right: 20px;
+    background-color: blue;
+    background-image: url(../img/facebook.png);
+    background-position: 50% 50%;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    color: #fff;
+    height: 62px;
+    width: 62px;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    z-index: 100;
+}
+#chatW:hover{
+    cursor: pointer;
+}
+#chatF:hover{
+    cursor: pointer;
+}
+#chatCloser:hover{
+    cursor: pointer;
 }
 #chat:hover{
     cursor: pointer;
