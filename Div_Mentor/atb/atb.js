@@ -422,7 +422,7 @@ function fnc2() {
 fnc2()
 const xqoy = document.querySelector('#xqoy')
 function xqoy1() {
-    xqoy.style.backgroundColor == 'initial' ? xqoy.style.backgroundColor = '#888' : xqoy.style.backgroundColor = 'initial'
+    xqoy.style.background == '' ? xqoy.style.background = 'url(https://www.kindpng.com/picc/m/180-1807389_online-check-mark-ok-approved-check-mark-svg.png) center/cover' : xqoy.style.background = ''
 }
 function f5() {
     location.reload()

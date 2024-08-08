@@ -388,7 +388,7 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div id="corousel1" class="corousel">
-                    <div><a href=""><b style="color:black">nagd kreditler</b></a> <br> <button>sifariş</button>
+                    <div><a href=""><b style="color:black">nağd kreditler</b></a> <br> <button>sifariş</button>
                     </div>
                 </div>
             </div>
@@ -602,16 +602,24 @@
                         <span>
                             <p>hansı məbləğ?</p>
                             <input onchange="birinci()" id="mebleg" style="max-width: 100px;" class="firstfirst"
-                                value="5000" type="text" />
+                                value="5000" type="number" />
                             <input step="100" min="300" max="40000" oninput="tap()" id="pst-ay" class="pst"
                                 type="range" />
-                        </span>
+                            </span>
+                            <div id="blc">
+                                <p>300</p>
+                                <p>40.000</p>
+                            </div>
                         <span>
                             <p>müddəti seçin</p>
                             <input onchange="birinciay()" id="input-ay" style="max-width: 100px;" class="firstfirst"
-                                value="12" type="text" />
+                                value="12" type="number" />
                             <input oninput="tap2()" min="3" max="48" id="pst-faiz" class="pst" type="range" />
                         </span>
+                        <div id="blc">
+                            <p>3</p>
+                            <p>48</p>
+                        </div>
                         <div id="calc-txt-desktop">
                             <button id="xqoy" onclick='xqoy1()'></button>
                             <p>"sifariş" düyməsini basaraq müraciət qaydaları ilə razılaşmış olursunuz</p>
@@ -669,7 +677,7 @@
                                 <option>aylıq ödəniş</option>
                             </select>
                             <input oninput="fnc3()" id="emanet-input" style="outline: none;" class="emanet-element"
-                                placeholder="məbləğ (min. 1000 AZN/USD)*" min="1000" type="text" />
+                                placeholder="məbləğ (min. 1000 AZN/USD)*" min="1000" type="number" />
                         </div>
 
                         <div id="deposit-result">
@@ -739,7 +747,7 @@
                         </div>
                         <div id="exchange-calculator-input">
                             <div id="exchange-calculator-input-first" class="item-item">
-                                <input value="100" type="text" id="input1" />
+                                <input value="100" type="number" id="input1" />
                                 <select id="select1">
                                     <option value="1.7" id="option-us">USD</option>
                                     <option value="1.8530" id="option-eu">EUR</option>
