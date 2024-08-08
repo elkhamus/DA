@@ -19,6 +19,7 @@ h5{
     line-height: 1.3;
     padding: 30px 30px 0 30px;
 }
+
 #chat{
     position: fixed;
     bottom: 20px;
@@ -62,9 +63,30 @@ h5{
     cursor: pointer;
 }
 body{position: relative;}
-#salam{
-    display: none;
+
+#shi{
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+    height: 0;
+    overflow-y: auto;
+    position: fixed;
+    top: 76px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 900;
+    transition: .3s;
 }
+
+.active-side{
+    visibility: visible !important;
+    z-index: 900 !important;
+    opacity: 1 !important;
+    height: auto !important;
+}
+
 header{margin-top: 10px;}
 #xqoy {background-color: initial;}
 #nav{position: relative;}
@@ -363,14 +385,6 @@ body {
   margin: 60px auto;
 }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .swiper-slide img {
   display: block;
@@ -1040,7 +1054,7 @@ li{list-style: none;}
       #exchange-txt{
         padding: 0 10px;
       }
-      #ibo{display: flex;}
+      #fck{display: flex;}
       #exchange-calculator{
         width: 60%;
         margin: 50px 40px;

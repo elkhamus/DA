@@ -1,29 +1,28 @@
 const sideOPN = document.querySelector('#ac')
 const sideCL = document.querySelector('#bagla')
-const hdr = document.querySelector('#salam')
+const hdr = document.querySelector('#shi')
 const headd = document.querySelector('#head')
 const bodyy = document.querySelector('.container')
 const swpierr = document.querySelector('.swiper')
 const ftr = document.querySelector('footer')
-function sideOpen() {
-    bodyy.style.display = 'none'
-    sideCL.style.display = 'block'
-    sideOPN.style.display = 'none'
-    hdr.style.display = 'initial'
-    headd.style.position = 'relative';
-    swpierr.style.display = 'none'
-    ftr.style.display = 'none'
-}
-function sideClose() {
-    bodyy.style.display = 'initial'
-    sideCL.style.display = 'none'
-    sideOPN.style.display = 'block'
-    hdr.style.display = 'none'
-    headd.style.position = 'fixed';
-    swpierr.style.display = 'initial'
-    ftr.style.display = 'initial'
+const chat = document.getElementById("chat")
+const access = document.getElementById("access")
 
+function sideOpen() {
+    hdr.classList.toggle("active-side")
+    if (hdr.classList.contains("active-side")) {
+        chat.style.display = "none"
+        access.style.display = "none"
+        sideCL.style.display = 'block'
+        sideOPN.style.display = 'none'
+    } else {
+        chat.style.display = "flex"
+        access.style.display = "flex"
+        sideCL.style.display = 'none'
+        sideOPN.style.display = 'block'
+    }
 }
+
 const minusPrice = document.querySelector('#calc-minus-sign')
 const plusPrice = document.querySelector('#calc-plus-sign')
 const price = document.querySelector('#price')
@@ -43,7 +42,7 @@ function calcMinus() {
         x = 300
         price.value = x + ' AZN'
     }
-    let  hesabla = (x + (x * y / 100))/y;
+    let hesabla = (x + (x * y / 100)) / y;
     odenis.innerHTML = hesabla.toFixed(2)
 }
 function calcPlus() {
@@ -53,7 +52,7 @@ function calcPlus() {
         x = 40000
         price.value = x + ' AZN'
     }
-    let  hesabla = (x + (x * y / 100))/y;
+    let hesabla = (x + (x * y / 100)) / y;
     odenis.innerHTML = hesabla.toFixed(2)
 }
 function calcMinusMonth() {
@@ -79,7 +78,7 @@ function calcMinusMonth() {
         f = 15 + '%'
         faiz.innerHTML = f
     }
-    let  hesabla = (x + (x * y / 100))/y;
+    let hesabla = (x + (x * y / 100)) / y;
     odenis.innerHTML = hesabla.toFixed(2)
 }
 function calcPlusMonth() {
@@ -105,7 +104,7 @@ function calcPlusMonth() {
         f = 15 + '%'
         faiz.innerHTML = f
     }
-    let  hesabla = (x + (x * y / 100))/y;
+    let hesabla = (x + (x * y / 100)) / y;
     odenis.innerHTML = hesabla.toFixed(2)
 }
 function update() {
@@ -118,10 +117,10 @@ function update() {
         x = 40000
         price.value = x + ' AZN'
     }
-    let  hesabla = (x + (x * y / 100))/y;
+    let hesabla = (x + (x * y / 100)) / y;
     odenis.innerHTML = hesabla.toFixed(2)
 
-    
+
 }
 function updateMonth() {
     y = parseInt(priceMonth.value)
@@ -150,11 +149,11 @@ function updateMonth() {
         f = 15 + '%'
         faiz.innerHTML = f
     }
-    let  hesabla = (x + (x * y / 100))/y;
+    let hesabla = (x + (x * y / 100)) / y;
     odenis.innerHTML = hesabla.toFixed(2)
 }
 
-o = (x + (x * y / 100))/y;
+o = (x + (x * y / 100)) / y;
 
 // E X C H A N G E 
 const input1 = document.querySelector('#input1')
@@ -171,7 +170,7 @@ const euFirst = document.querySelector('#option-eu-second')
 const usFirst = document.querySelector('#option-us-second')
 const gbpFirst = document.querySelector('#option-gbp-second')
 const azFirst = document.querySelector('#option-az-second')
-let n =1
+let n = 1
 input2.innerHTML = 100
 input1.oninput = exchange
 select2.onchange = exchange
@@ -197,85 +196,85 @@ let em1 = ''
 let em2 = ''
 let em3 = ''
 
-function tap(){ // Mebleg range oninput
+function tap() { // Mebleg range oninput
     mebleg.value = pstAy.value;
-     em = +mebleg.value * yd;
-     em2 = em / 100;
-     em1 = +mebleg.value + em2
-     em3 = em1 / inputAy.value
+    em = +mebleg.value * yd;
+    em2 = em / 100;
+    em1 = +mebleg.value + em2
+    em3 = em1 / inputAy.value
     pul.innerHTML = em3.toFixed(0)
 }
-function tap2(){ // ay range oninput
+function tap2() { // ay range oninput
     inputAy.value = pstFaiz.value;
-    let  axtar = (e + (e * i / 100))/i;
+    let axtar = (e + (e * i / 100)) / i;
     pul.innerHTML = axtar.toFixed(2)
-    if(inputAy.value <=12){
+    if (inputAy.value <= 12) {
         yd = 11
     }
-    else if(inputAy.value >=13 && inputAy.value <= 23){
+    else if (inputAy.value >= 13 && inputAy.value <= 23) {
         yd = 13
     }
-    else if(inputAy.value >=24 && inputAy.value <= 36){
+    else if (inputAy.value >= 24 && inputAy.value <= 36) {
         yd = 14
     }
-    else{
+    else {
         yd = 15
     }
     em = +mebleg.value * yd;
     em2 = em / 100;
     em1 = +mebleg.value + +em2
     em3 = em1 / inputAy.value
-   pul.innerHTML = em3.toFixed(0)
-     faizzzz.innerHTML = yd  + '%'
+    pul.innerHTML = em3.toFixed(0)
+    faizzzz.innerHTML = yd + '%'
 
-   
+
 }
-function birinci(){ // Mebleg input onchange
+function birinci() { // Mebleg input onchange
     pstAy.value = parseInt(mebleg.value)
-    let  axtar = (e + (e * i / 100))/i;
-    pul.innerHTML = axtar.toFixed(2)   
+    let axtar = (e + (e * i / 100)) / i;
+    pul.innerHTML = axtar.toFixed(2)
     mebleg.value = pstAy.value;
-     em = +mebleg.value * yd;
-     em2 = em / 100;
-     em1 = +mebleg.value + em2
-     em3 = em1 / inputAy.value
+    em = +mebleg.value * yd;
+    em2 = em / 100;
+    em1 = +mebleg.value + em2
+    em3 = em1 / inputAy.value
     pul.innerHTML = em3.toFixed(0)
 }
 birinci()
 birinciay()
-function birinciay(){ // ay input onchange
+function birinciay() { // ay input onchange
     pstFaiz.value = parseInt(inputAy.value)
-    if(inputAy.value <=12){
+    if (inputAy.value <= 12) {
         yd = 11
     }
-    else if(inputAy.value >=13 && inputAy.value <= 23){
+    else if (inputAy.value >= 13 && inputAy.value <= 23) {
         yd = 13
     }
-    else if(inputAy.value >=24 && inputAy.value <= 36){
+    else if (inputAy.value >= 24 && inputAy.value <= 36) {
         yd = 14
     }
-    else{
+    else {
         yd = 15
     }
-     faizzzz.innerHTML = yd + '%'
-     em = mebleg.value * yd;
-     em2 = em / 100;
-     em1 = +mebleg.value + em2
-     em3 = em1 / inputAy.value
+    faizzzz.innerHTML = yd + '%'
+    em = mebleg.value * yd;
+    em2 = em / 100;
+    em1 = +mebleg.value + em2
+    em3 = em1 / inputAy.value
     pul.innerHTML = em3.toFixed(0)
 }
 const button = document.querySelector('#button1');
 const buttonn = document.querySelector('#button2');
-const calcMain = document.querySelector('.calc-main-main'); 
+const calcMain = document.querySelector('.calc-main-main');
 const calcMainMobile = document.querySelector('#calc-main')
 const paymentMobile = document.querySelector('#payment')
 const buttonMobile = document.querySelector('#sifaris')
 const calcbtnMobile = document.querySelector('#calc-btn1')
 const calcbtnMobilee = document.querySelector('#cacl-btn2')
 const btnp = document.querySelector('#btnp')
-const  mnt = document.querySelector('#emanet')
-const pth11 = document.querySelector('#path11') 
-const pth12 = document.querySelector('#path12') 
+const mnt = document.querySelector('#emanet')
+const pth11 = document.querySelector('#path11')
+const pth12 = document.querySelector('#path12')
 const pth13 = document.querySelector('#path13')
 const pth21 = document.querySelector('#path21')
 const pth22 = document.querySelector('#path22')
@@ -291,7 +290,7 @@ const pth31 = document.querySelector('#path31')
 const pth32 = document.querySelector('#path32')
 const pth33 = document.querySelector('#path33')
 const pth34 = document.querySelector('#path34')
-function qaytar(){
+function qaytar() {
     calcMain.classList.remove('none')
     mnt.style.display = 'none'
     button.style.background = '#6f0bbb'
@@ -345,7 +344,7 @@ function deyisdir() {
     pth33.style.stroke = 'white'
     pth34.style.stroke = 'white'
 }
-function qaytarmobile(){
+function qaytarmobile() {
     calcMainMobile.style.display = 'block'
     buttonMobile.style.display = 'block'
     paymentMobile.style.display = 'block'
@@ -376,35 +375,35 @@ const emanetMebleg = document.querySelector('#emanet-mebleg')
 const emanet = document.querySelector('#emanet1')
 const emanett = document.querySelector('#emanet2')
 const emanettt = document.querySelector('#emanet3')
-const  emanetInput = document.querySelector('#emanet-input')
+const emanetInput = document.querySelector('#emanet-input')
 let qa = 0
 
-function fnc1(){
-    if(emanet.value == 'USD'){
+function fnc1() {
+    if (emanet.value == 'USD') {
         qa = 0.1
         // emanetMebleg.innerHTML = emanetInput.value * 0.001
     }
-    else if(emanett.value == 12 && emanettt.value == 'müddətin sonunda'){
+    else if (emanett.value == 12 && emanettt.value == 'müddətin sonunda') {
         qa = 5.5
         // emanetMebleg.innerHTML = emanetInput.value * 55 / 1000
     }
-    else if(emanett.value == 24 && emanettt.value == 'müddətin sonunda'){
+    else if (emanett.value == 24 && emanettt.value == 'müddətin sonunda') {
         qa = 6.5
         // emanetMebleg.innerHTML = emanetInput.value * 0.065
     }
-    else if(emanett.value == 36 && emanettt.value == 'müddətin sonunda'){
+    else if (emanett.value == 36 && emanettt.value == 'müddətin sonunda') {
         qa = 9
         // emanetMebleg.innerHTML = emanetInput.value * 0.09
     }
-    else if(emanett.value == 12 && emanettt.value == 'aylıq ödəniş'){
+    else if (emanett.value == 12 && emanettt.value == 'aylıq ödəniş') {
         qa = 5
         // emanetMebleg.innerHTML = emanetInput.value * 0.05
     }
-    else if(emanett.value == 24 && emanettt.value == 'aylıq ödəniş'){
+    else if (emanett.value == 24 && emanettt.value == 'aylıq ödəniş') {
         qa = 6
         // emanetMebleg.innerHTML = emanetInput.value * 0.06
     }
-    else if(emanett.value == 36 && emanettt.value == 'aylıq ödəniş'){
+    else if (emanett.value == 36 && emanettt.value == 'aylıq ödəniş') {
         qa = 8
         // emanetMebleg.innerHTML = emanetInput.value * 0.08
     }
@@ -412,12 +411,12 @@ function fnc1(){
 }
 let tr = 1
 let tr1 = 1
-function fnc3(){
+function fnc3() {
     tr = (emanetInput.value * qa) / 100
     tr1 = tr / parseInt(emanett.value)
     emanetMebleg.innerHTML = tr1.toFixed(2)
 }
-function fnc2(){
+function fnc2() {
     emanetFaiz.innerHTML = qa + ' % -'
 }
 fnc2()
