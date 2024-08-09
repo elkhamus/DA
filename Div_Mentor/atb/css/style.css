@@ -49,13 +49,13 @@ h5{
     justify-content: center;
     align-items: center;
     border-radius: 100px;
-    z-index: 100;
+    z-index: 100;  
 }
 #chatCloser{
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: white;
+    background-color: silver;
     background-image: url(../img/ic-close.png);
     background-position: 50% 50%;
     background-size: 20%;
@@ -1049,7 +1049,7 @@ li{list-style: none;}
     }
     
     .corousel button{display: initial;}
-    .card-item{width: 23%; min-height: 300px;}
+    .card-item{width: 23%; min-height: 300px;transition: .3s;}
     .card-item-elements h2{
         font-size: 1.5em;
         line-height: 3;

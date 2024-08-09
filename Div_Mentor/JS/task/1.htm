@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        input {
+           font-size: 2rem;
+        }
+        button {
+            font-size: 2rem;
+        }
+        </style>
+    </head>
+    <body>
+        <input id="inp" type="number" />
+        <button onclick="validate()">ok</button>
+
+
+
+
+
+
+        <script>
+            const inp = document.getElementById('inp');
+            let arr = [];
+            function validate() {
+                 arr = [inp.value]
+                 arr = arr.splite(".")
+                    console.log(arr)
+            }
+        </script>
+    </body>
+</html>
