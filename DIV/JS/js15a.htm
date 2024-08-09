@@ -5,33 +5,69 @@
         <title>Document</title>
     </head>
     <body>
-
-        
-
-
-
-
-
-
         <script>
             class Telebe {
-             constructor(name, sex, height, year){
-                this.name = name
-                this.sex = sex
-                this.height = height
-                this.year = year
+                constructor(name, sex, height, year){
+                    this.name = name
+                    this.sex = sex
+                    this.height = height
+                    this.year = year
+                }
                 getAge() {
                     return new Date().getFullYear() - this.year
                 }
                 sayHi() {
-                    return `Salamlar, mənim adım ${this.name} və mən ${getAge()} yaşındayam.`
+                    return `Salam, mən ${this.name}, ${this.getAge()} yaşım var`
                 }
-            }}
+            }
 
-        let t1 = new Telebe("Nurlan", "kişi", 1.80, 1999)
-        let t2 = new Telebe("Nigar", "qadın", 1.70, 2000)
+            let tlb1 = new Telebe('Elmir', 'male', 192, 2000)
+            let tlb2 = new Telebe('Yusif', 'male', 172, 2005)
 
+            /*
+            function Telebe(name, sex, height, year) {
+                // this = {}
+                this.name = name
+                this.sex = sex
+                this.height = height
+                this.year = year
+                this.getAge = function() {
+                    return new Date().getFullYear() - this.year
+                }
+                this.sayHi = function() {
+                    return `Salam, mən ${this.name}, ${this.getAge()} yaşım var`
+                }
+                // return this
+            }
+            */
 
+            /*
+            let tlb1 = {
+                name: 'Elmir', 
+                sex: 'male',
+                height: 192,
+                year: 2000,
+                getAge() {
+                    return new Date().getFullYear() - this.year
+                },
+                sayHi() {
+                    return `Salam, mən ${this.name}, ${this.getAge()} yaşım var`
+                }
+            }
+
+            let tlb2 = {
+                name: 'Yusif',
+                sex: 'male',
+                height: 172,
+                year: 2005,
+                getAge() {
+                    return new Date().getFullYear() - this.year
+                },
+                sayHi() {
+                    return `Salam, mən ${this.name}, ${this.getAge()} yaşım var`
+                }
+            }
+            */
         </script>
     </body>
 </html>
