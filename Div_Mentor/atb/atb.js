@@ -43,7 +43,7 @@ function calcMinus() {
         price.value = x + ' AZN'
     }
     let hesabla = (x + (x * y / 100)) / y;
-    odenis.innerHTML = hesabla.toFixed(2)
+    odenis.innerHTML = `${hesabla.toFixed(0)}AZN`
 }
 function calcPlus() {
     x += 100
@@ -53,7 +53,7 @@ function calcPlus() {
         price.value = x + ' AZN'
     }
     let hesabla = (x + (x * y / 100)) / y;
-    odenis.innerHTML = hesabla.toFixed(2)
+    odenis.innerHTML = `${hesabla.toFixed(0)}AZN`
 }
 function calcMinusMonth() {
     y -= 1
@@ -79,7 +79,7 @@ function calcMinusMonth() {
         faiz.innerHTML = f
     }
     let hesabla = (x + (x * y / 100)) / y;
-    odenis.innerHTML = hesabla.toFixed(2)
+    odenis.innerHTML = `${hesabla.toFixed(0)}AZN`
 }
 function calcPlusMonth() {
     y += 1
@@ -105,7 +105,7 @@ function calcPlusMonth() {
         faiz.innerHTML = f
     }
     let hesabla = (x + (x * y / 100)) / y;
-    odenis.innerHTML = hesabla.toFixed(2)
+    odenis.innerHTML = `${hesabla.toFixed(0)}AZN`
 }
 function update() {
     x = parseInt(price.value)
@@ -118,7 +118,7 @@ function update() {
         price.value = x + ' AZN'
     }
     let hesabla = (x + (x * y / 100)) / y;
-    odenis.innerHTML = hesabla.toFixed(2)
+    odenis.innerHTML = `${hesabla.toFixed(0)}AZN`
 
 
 }
@@ -150,7 +150,7 @@ function updateMonth() {
         faiz.innerHTML = f
     }
     let hesabla = (x + (x * y / 100)) / y;
-    odenis.innerHTML = hesabla.toFixed(2)
+    odenis.innerHTML = `${hesabla.toFixed(0)}AZN`
 }
 
 o = (x + (x * y / 100)) / y;
@@ -202,7 +202,7 @@ function tap() { // Mebleg range oninput
     em2 = em / 100;
     em1 = +mebleg.value + em2
     em3 = em1 / inputAy.value
-    pul.innerHTML = em3.toFixed(0)
+    pul.innerHTML = `${em3.toFixed(0)}₼`
 }
 function tap2() { // ay range oninput
     inputAy.value = pstFaiz.value;
@@ -224,7 +224,7 @@ function tap2() { // ay range oninput
     em2 = em / 100;
     em1 = +mebleg.value + +em2
     em3 = em1 / inputAy.value
-    pul.innerHTML = em3.toFixed(0)
+    pul.innerHTML = `${em3.toFixed(0)}₼`
     faizzzz.innerHTML = yd + '%'
 
 
@@ -232,13 +232,13 @@ function tap2() { // ay range oninput
 function birinci() { // Mebleg input onchange
     pstAy.value = parseInt(mebleg.value)
     let axtar = (e + (e * i / 100)) / i;
-    pul.innerHTML = axtar.toFixed(2)
+    pul.innerHTML = `${axtar.toFixed(2)}₼`
     mebleg.value = pstAy.value;
     em = +mebleg.value * yd;
     em2 = em / 100;
     em1 = +mebleg.value + em2
     em3 = em1 / inputAy.value
-    pul.innerHTML = em3.toFixed(0)
+    pul.innerHTML = `${em3.toFixed(0)}₼`
 }
 birinci()
 birinciay()
@@ -261,7 +261,7 @@ function birinciay() { // ay input onchange
     em2 = em / 100;
     em1 = +mebleg.value + em2
     em3 = em1 / inputAy.value
-    pul.innerHTML = em3.toFixed(0)
+    pul.innerHTML = `${em3.toFixed(0)}₼`
 }
 const button = document.querySelector('#button1');
 const buttonn = document.querySelector('#button2');

@@ -51,6 +51,9 @@ h5{
     border-radius: 100px;
     z-index: 100;  
 }
+.firstfirst {
+    border: none;
+}
 #chatCloser{
     position: fixed;
     bottom: 20px;
