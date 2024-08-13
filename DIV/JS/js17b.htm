@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+        <style>
+            input { display: table; margin: 5px 0; 
+                text-align: right; width: 40px; }
+        </style>
+    </head>
+    <body>
+        <button onclick="add()">+</button>
+        <div id="inp"></div>
+        <button onclick="hesabla('cem')">Sum</button>
+        <button onclick="hesabla('ort')">"Avg"</button>
+        <h1></h1>
+
+        <script>
+            const inp = document.getElementById("inp")
+            add()
+
+            function hesabla(op) {
+                const inputs = inp.getElementsByTagName("input")
+                let arr = []
+                for (let i = 0; i < inputs.length; i++) {
+                    arr.push(+inputs[i].value)
+                }
+                document.querySelector("h1").innerHTML = 
+                    (op == 'cem') ? 'Cem: ' + cem(arr): 
+                    (op == 'ort') ? 'Ədədi orta: ' + ort(arr) : ''
+            }
+
+            function ort(arr) {
+                return cem(arr) / arr.length
+            }
+
+            function cem(arr) {
+                let acc = 0
+                for (let i = 0; i < arr.length; i++) {
+                    acc += arr[i]
+                }
+                return acc
+            }
+
+            function add() {
+                inp.innerHTML += `<input type="number" />`
+            }
+
+            function sum() {
+                let acc = 0
+                for (let i = 0; i < arguments.length; i++) {
+                    acc += arguments[i]
+                }
+                return acc
+            }
+        </script>
+    </body>
+</html>

@@ -67,8 +67,9 @@
                             ball.y < brick.y + brick.height &&
                             ball.x + ball.width/2 > brick.x &&
                             ball.x + ball.width/2 < brick.x + brick.width ) {
-                            brick.elem.remove()
+                            document.getElementById(brick.id).remove()
                             this.arr.splice(i, 1)
+                            ball.stepY *= -1
                         }
                     }
                 }

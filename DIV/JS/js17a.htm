@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+    </head>
+    <body>
+        <select id="n"></select>
+        <h1></h1>
+
+        <script>
+            const n = document.getElementById("n")
+            const h1 = document.querySelector("h1")
+            const week = ['', 'bazar ertəsi', 'çərşənbə axşamı', 'çərşənbə', 'cümə axşamı', 'cümə','şənbə', 'bazar']
+            for (let i = 1; i <= 7; i++) n.innerHTML += `<option>${i}</option>`
+
+            n.onchange = function() {
+                h1.innerHTML = week[n.value]
+                /*
+                h1.innerHTML = n.value == 1 ? 'bazar ertəsi' :
+                               n.value == 2 ? 'çərşənbə axşamı' :
+                               n.value == 3 ? 'çərşənbə' :
+                               n.value == 4 ? 'cümə axşamı' :
+                               n.value == 5 ? 'cümə' :
+                               n.value == 6 ? 'şənbə' :'bazar'
+
+                ///////////////////
+                
+                if (n.value == 1) h1.innerHTML = 'bazar ertəsi'
+                else if (n.value == 2) h1.innerHTML = 'çərşənbə axşamı'
+                else if (n.value == 3) h1.innerHTML = 'çərşənbə'
+                else if (n.value == 4) h1.innerHTML = 'cümə axşamı'
+                else if (n.value == 5) h1.innerHTML = 'cümə'
+                else if (n.value == 6) h1.innerHTML = 'şənbə'
+                else  h1.innerHTML = 'bazar'
+
+                ////////////////////
+                
+                switch (+n.value) {
+                    case 1:
+                        h1.innerHTML = 'bazar ertəsi'
+                        break
+                    case 2:
+                        h1.innerHTML = 'çərşənbə axşamı'
+                        break
+                    case 3:
+                        h1.innerHTML = 'çərşənbə'
+                        break
+                    case 4:
+                        h1.innerHTML = 'cümə axşamı'
+                        break
+                    case 5:
+                        h1.innerHTML = 'cümə'
+                        break
+                    case 6:
+                        h1.innerHTML = 'şənbə'
+                        break
+                    case 7:
+                        h1.innerHTML = 'bazar'
+                        break
+                    default:
+                        h1.innerHTML = ''
+                        break;
+                }
+                */
+            }
+
+            /*
+            for (let i = 1; i <= 10; i++) {
+                if (i == 5) continue
+                if (i == 9) break
+                console.log(i);
+            }
+            */
+        </script>
+    </body>
+</html>
