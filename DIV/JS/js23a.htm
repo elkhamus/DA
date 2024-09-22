@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function create() {
+                let c = 0
+                return function() {
+                    return c++
+                }
+            }
+
+            let count1 = create()
+            let count2 = create()
+
+
+            /*
+            function sum(a) {
+                return function(b) {
+                    return a + b
+                }
+            }
+
+            sum(4)(5)
+            */
+        </script>
+    </body>
+</html>

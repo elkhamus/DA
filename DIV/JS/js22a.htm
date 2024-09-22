@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <ul></ul>
+        <script>
+            const ul = document.querySelector("ul")
+            const staff = [
+                {name: 'Elxan', sex: 'm', salary: 1200, car: 'Kia' },
+                {name: 'Kirman', sex: 'm', salary: 900, laptop: 'Dell' },
+                {name: 'Aysu', sex: 'f', salary: 500, brother: 'Ugur' },
+                {name: 'Murad', sex: 'm', salary: 450, bird: 'Qaşqaldaq' },
+                {name: 'Efsane', sex: 'f', salary: 400, cat: 'Bella' }
+            ]
+
+            ul.innerHTML = staff.map(item => {
+                let arr = Object.values(item)
+                return `<li>${arr[0]} - ${arr.at(-1)}</li>`
+            }).join('')
+
+            // Object.keys(obj)
+            // Object.values(obj)
+            // Object.entries(obj)
+            // Object.fromEntries(arr)
+        </script>
+    </body>
+</html>

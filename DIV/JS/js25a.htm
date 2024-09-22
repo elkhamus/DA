@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="" onsubmit="return yoxla()">
+            <p><input type="text" id="name" pattern="[A-ZƏÜÖÇŞİ][A-Za-zƏÜÖÇŞİçşöğüə\s\-]{2,20}" placeholder="Ad" /></p>
+            <p><input type="email" id="user" required="required" placeholder="E-mail" /></p>
+            <p><input type="password" minlength="8" required="required" id="pass" placeholder="Parol" /></p>
+            <p><input type="number" min="12" max="100" id="age" placeholder="Yas" /></p>
+            <p><input type="file" id="photo" accept="image/*" placeholder="Photo" /></p>
+            <p><input type="checkbox" id="accept" />Şərtləri qəbul edirəm</p>
+            <div id="message"></div>
+            <p><input type="submit" id="btn" /></p>
+        </form>
+
+        <script>
+            const accept = document.getElementById("accept")
+            const age = document.getElementById("age")
+            const message = document.getElementById("message")
+
+            function yoxla() {
+                message.innerHTML = ''
+                let bayraq = true
+                if(!accept.checked) {
+                    message.innerHTML += 'Şərtləri qəbul edin. '
+                    bayraq = false
+                }
+                if(age.value == '') {
+                    message.innerHTML += 'Yasi bos buraxma. '
+                    bayraq = false
+                }
+                else if(age.value < 18) {
+                    message.innerHTML += 'Boyüyüb gələrsən. '
+                    bayraq = false
+                }
+                return bayraq
+            }
+        </script>
+    </body>
+</html>

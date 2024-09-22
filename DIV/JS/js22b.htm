@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="card">
+            <h1></h1>
+            <ul></ul>
+        </div>
+
+        <script>
+            const card = document.getElementById("card")
+            let xususileMuradUcunAcilanObyekt = {
+                name: 'Murad', 
+                sex: 'm', 
+                age: 18, 
+                color: 'brown', 
+                height: 181
+            }
+
+            const [ad, ...rest] = Object.values(xususileMuradUcunAcilanObyekt)
+            const prop = ["Cins", "Yas", "Goz", "Boy"]
+
+            card.querySelector("h1").innerHTML = ad
+            card.querySelector("ul").innerHTML = rest.reduce((kod, elm, i) => kod + `<li>${prop[i]}: ${elm}</li>`, '')
+
+            /*
+            const {name, sex, age, color, height} = xususileMuradUcunAcilanObyekt
+
+            card.querySelector("h1").innerHTML = name
+            card.querySelector("ul").innerHTML += `<li>Cins: ${sex}</li>`
+            card.querySelector("ul").innerHTML += `<li>Yas: ${age}</li>`
+            card.querySelector("ul").innerHTML += `<li>Boy: ${height}</li>`
+            card.querySelector("ul").innerHTML += `<li>Goz: ${color}</li>`
+            */
+        </script>
+    </body>
+</html>

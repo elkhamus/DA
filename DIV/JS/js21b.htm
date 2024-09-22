@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const n = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            const staff = [
+                {name: 'Elxan', sex: 'm', salary: 1200 },
+                {name: 'Kirman', sex: 'm', salary: 900 },
+                {name: 'Aysu', sex: 'f', salary: 500 },
+                {name: 'Murad', sex: 'm', salary: 450 },
+                {name: 'Efsane', sex: 'f', salary: 400 }
+            ]
+
+            console.log( staff.filter( (item) => item.sex == 'm')
+                              .reduce( (sum, item) => sum + item.salary, 0 ) );
+            
+            console.log( staff.reduce( (sum, item) => item.sex == 'm' ? sum + item.salary : sum, 0 ) );
+            
+            console.log( staff.reduce( (sum, item) => sum + item.salary, 0 ) );
+            
+            console.log( n.reduce( (cem, x) => cem + x, 0 ) );
+            
+        </script>
+    </body>
+</html>

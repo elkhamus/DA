@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let test = 'a "witch" and her "broom" is one'
+            let tag = "<h1>Hi!</h1>"
+            let lyrics = 'Bakı gözəl şəhər mehriban diyar. Baku sinəndə boy atıb oldum bəxtiyar. Baki səndə il eşqimin yadigarı var. Sən mənim söhbətim Bakü'
+            let str = "We will, we will rock you" 
+            let tel = '+99(477) 245-45-62'
+            let time = '12:64'
+            let saat = '12:64 12:14 24:24 122:04 12:341 19:44'
+            let domain = 'mail.div.edu.az w-t.az 123.com com.234'
+            
+            console.log( domain.match(/([\w-]+\.)+[a-z]{2,15}/g) )
+            console.log( saat.match(/\b(([0-1]\d)|([2][0-3])):[0-5]\d\b/g ))
+            console.log( test.match(/".+?"/gi ))
+            console.log( tag.match(/<\/?[a-z]+[1-6]?>/gi) )
+            console.log( lyrics.replace(/bak[iıuü]/gi, 'Bakı') )
+            console.log( /^[0-2]\d:[0-5]\d$/.test(time) )
+            console.log( tel.match(/\d/g).join('') )
+            console.log( tel.replace(/\D/g, '') )
+            console.log( str.match(/we/ig) )
+            console.log( str.replace(/we/ig, 'I') )
+
+            /*
+            let str = 'Bakı gözəl şəhər mehriban diyar.'
+            console.log(str.split('a').length - 1)
+            
+            let n = 0
+            for (let i = 0; i < str.length; i++) {
+                if(str[i].toLowerCase() == 'a') n++
+            }
+            */
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            /*
+            function sayHi(xitab) {
+                return xitab + ', ' + this.name
+            }
+            const obj1 = {name: "Vugar"}
+            const obj2 = {name: "Ayhan"}
+
+            sayHi.call(obj1, 'Hi')
+            sayHi.call(obj2, 'Salam')
+            sayHi.apply(obj2, ['Salam'])
+            */
+            
+            let obj = {
+                count: 85,
+                incr() {
+                    console.log(this.count++)
+                }
+            }
+            const oincr = obj.incr.bind(obj)
+
+            setInterval(oincr, 1000)
+            // setInterval(() => obj.incr(), 1000)
+            
+        </script>
+    </body>
+</html>

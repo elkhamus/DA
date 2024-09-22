@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const arr = [20, 8, 3, 760, 4, 2, -3, 7, 1265]
+
+            arr.sort( (a, b) => a - b )
+
+            console.log( arr )
+            
+
+            // const sum = function (a, b) {
+            //     return a + b
+            // }
+
+            const sum = function () { 
+                let s = 0
+                for (let i = 0; i < arguments.length; i++) {
+                    s += arguments[i]
+                }
+                return s
+            }
+
+            console.log( sum(4,6,8,9,8,5) )
+            
+
+        </script>
+    </body>
+</html>

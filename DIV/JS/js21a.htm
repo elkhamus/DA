@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <ul></ul>
+        <script>
+            const ul = document.querySelector("ul")
+            // let kod = ''
+            let arr = ['Murad', 'Efsane', 'Vuqar', 'Kirman', 'Guldeste', 'Elxan', 'Aysun']
+
+            ul.innerHTML = arr.filter( item => item[0] == 'A' || ['a','e'].includes(item.at(-1)) )
+                              .map( (item, ind, array) => `<li>${item} is a ${ind} element of [${array}] </li>` )
+                              .join('')
+            /*
+            ul.innerHTML = arr.reduce( (kod, item, ind) => ind % 2 ? kod + `<li>${item}</li>` : kod , '' )
+            ///////////////
+            ul.innerHTML = arr.reduce( (kod, item) => kod + `<li>${item}</li>` , '' )
+            ///////////////
+            ul.innerHTML = arr.map( item => `<li>${item}</li>` ).join('')
+            ///////////////
+            arr.forEach( item => kod += `<li>${item}</li>` )
+            ///////////////
+            for (const key of arr) {
+                kod += `<li>${key}</li>`
+            }
+            ///////////////
+            for (const i in arr) {
+                kod += `<li>${arr[i]}</li>`
+            }
+            ///////////////
+            for (let i = 0; i < arr.length; i++) {
+                kod += `<li>${arr[i]}</li>`
+            }
+            */
+            // ul.innerHTML = kod
+        </script>
+    </body>
+</html>

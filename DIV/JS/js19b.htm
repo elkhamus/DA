@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // const fibo = n => n <= 3 ? n : fibo(n - 2) + fibo(n - 1)
+            const fkt = n => n <= 1 ? 1 : fkt(n - 1) * n
+
+            function fibo(n) {
+                let a = 1
+                let b = 1
+                for (let i = 2; i <= n; i++) {
+                    let c = a + b
+                    a = b
+                    b = c
+                }
+                return b
+            }
+
+            function fibonacci(x) {
+                res = '1'
+                for (let i = 2; i <= x; i++) {
+                    res += ', ' + fibo(i)
+                }
+                return res
+            }
+
+            /*
+            function fkt(n) {
+                if(n <= 1) return 1
+                else return fkt(n - 1) * n
+            }
+            */
+        </script>
+    </body>
+</html>

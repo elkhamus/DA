@@ -36,16 +36,16 @@
             function move() {
                 for (let i = 0; i < flowers.length; i++) {
                     if ( flowers[i] ) {
-                        let cicek = flowers[i]
-                        let elem = document.getElementById( cicek.id )
-                        cicek.y += cicek.speed
-                        if (cicek.y > area.offsetHeight) {
+                        const {id, size, x, y, speed} = flowers[i]
+                        let elem = document.getElementById( id )
+                        flowers[i].y += speed
+                        if (y > area.offsetHeight) {
                             elem.remove()
                             delete flowers[i]
                         } else {
-                            elem.style.left = cicek.x + 'px'
-                            elem.style.top = cicek.y + 'px'
-                            elem.style.fontSize = cicek.size + 'em'
+                            elem.style.left = x + 'px'
+                            elem.style.top = y + 'px'
+                            elem.style.fontSize = size + 'em'
                         }
                     }
                 }
