@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+        <style>
+            body { margin: 0; display: flex; height: 100vh;}
+            #milyoncu { margin: auto; padding: 30px; text-align: center;
+                font: 1em Arial; border-radius: 20px; 
+                width: 400px; box-shadow: 0 0 10px silver; }
+            ul { list-style: none; text-align: initial; padding: 0 0 0 100px;}
+        </style>
+    </head>
+    <body>
+        <div id="milyoncu">
+            <h1></h1>
+            <h2></h2>
+            <ul></ul>
+            <button></button>
+        </div>
+
+        <script>
+            const h1 = document.querySelector('h1')
+            const h2 = document.querySelector('h2')
+            const list = document.querySelector('ul')
+            const btn = document.querySelector('button')
+            const ajax = new XMLHttpRequest()
+            const answer = []
+            let title = ''
+            let quiz = []
+            let x = 0
+            let correct = 0
+                let wrong = 0
+                let empty = 0
+            
+            ajax.open('GET', 'data/quiz.json')
+            ajax.send()
+            ajax.onload = function() {
+                let json = JSON.parse( ajax.responseText )
+                quiz = json.quiz
+                title = json.title
+                h1.innerHTML = "TEST:"
+                h2.innerHTML = title
+                btn.innerHTML = "Başla"
+                btn.setAttribute('onclick', "next()")
+            }
+
+            function next() {
+                let kod = ''
+                answer[x] = '-'
+                h1.innerHTML = `Sual: ${x + 1}`
+                h2.innerHTML = quiz[x].q
+                quiz[x].a.forEach((cvb, i) => kod += `<li><label>
+                    <input onclick="keep(${x}, ${i})" type="radio" name="cvb" />
+                    ${cvb}<label></li>
+                    `);
+                list.innerHTML = kod
+                btn.innerHTML = "Sonrakı"
+                x++
+                if(x >= quiz.length) {
+                    btn.innerHTML = "Nəticələr"
+                    btn.setAttribute('onclick', "result()")
+                }
+            }
+
+            function keep(x, i) {
+                answer[x] = i
+                // console.log(answer)
+            }
+
+            function result() {
+                h1.innerHTML = title
+                h2.innerHTML = "testinin nəticələri"
+                
+                for (let i = 0; i < quiz.length; i++) {
+                    if(answer[i] == '-') empty++
+                    else if(answer[i] == quiz[i].t) correct++
+                    else wrong++
+                }
+                list.innerHTML = `
+                    <li>Doğru: ${correct}</li>
+                    <li>Yanlış: ${wrong}</li>
+                    <li>Boş: ${empty}</li>
+                `
+                btn.remove()
+            }
+        </script>
+    </body>
+</html>

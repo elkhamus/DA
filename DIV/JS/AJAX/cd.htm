@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    </head>
+    <body>
+        <header class="bg-light">
+            <div class="container py-3">
+                <button onclick="loadData(card)" type="button" class="btn btn-success">Card</button>
+                <button onclick="loadData(table)" type="button" class="btn btn-warning">Table</button>
+            </div>
+        </header>
+        <main>
+            <div id="content" class="container py-3"></div>
+        </main>
+        <footer></footer>
+
+        <script>
+            const ajax = new XMLHttpRequest()
+            const content = document.getElementById('content')
+            const file = 'data/cd.xml'
+
+            function loadData(f) {
+                ajax.open('GET', file)
+                ajax.send()
+                ajax.onload = function() {
+                    content.innerHTML = f(ajax.responseXML)
+                }
+            }
+
+            function table(xml) {
+                const cdCat = xml.querySelectorAll('CD')
+                const title = ['TITLE', 'ARTIST', 'COUNTRY', 'COMPANY', 'PRICE', 'YEAR']
+
+                let kod = '<table class="table table-striped table-hover">'
+                kod += `<tr>`
+                title.forEach(t => kod += `<th class="bg-warning">${t}</th>`)
+                kod += `</tr>`
+                for (const cd of cdCat) {
+                    kod += `<tr>`
+                    title.forEach(t => kod += `<td>${cd.querySelector(t).innerHTML}</td>`)
+                    kod += `</tr>`
+                }
+                kod += '</table>'
+                return kod
+            }
+
+            function card(xml) {
+                let kod = ''
+                return kod
+            }
+        </script>
+    </body>
+</html>

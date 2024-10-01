@@ -1,0 +1,105 @@
+{
+    "title": "Ümumi bilik sualları",
+    "quiz": [
+        {
+            "q": "Fransanın paytaxtı hansıdır?",
+            "a": [
+                "Roma",
+                "Paris",
+                "Madrid",
+                "Berlin"
+            ],
+            "t": 1
+        },
+        {
+            "q": "Qırmızı Planet kimi tanınan planet hansıdır?",
+            "a": [
+                "Saturn",
+                "Mars",
+                "Venera",
+                "Yupiter"
+            ],
+            "t": 1
+        },
+        {
+            "q": "Yer kürəsində ən böyük okean hansıdır?",
+            "a": [
+                "Atlantik Okean",
+                "Şimal Buzlu Okean",
+                "Hind Okeanı",
+                "Sakit Okean"
+            ],
+            "t": 3
+        },
+        {
+            "q": "'Romeo və Cülyetta' əsərinin müəllifi kimdir?",
+            "a": [
+                "Mark Tven",
+                "Ceyn Ostin",
+                "Uilyam Şekspir",
+                "Çarlz Dikkens"
+            ],
+            "t": 2
+        },
+        {
+            "q": "Qızılın kimyəvi simvolu hansıdır?",
+            "a": [
+                "Pb",
+                "Fe",
+                "Au",
+                "Ag"
+            ],
+            "t": 2
+        },
+        {
+            "q": "Dünyanın ən böyük qitəsi hansıdır?",
+            "a": [
+                "Afrika",
+                "Asiya",
+                "Avstraliya",
+                "Avropa"
+            ],
+            "t": 1
+        },
+        {
+            "q": "İlk insan ayağı ilə Aya enən kim idi?",
+            "a": [
+                "Yuri Qaqarin",
+                "Neil Armstrong",
+                "John Glenn",
+                "Buzz Aldrin"
+            ],
+            "t": 1
+        },
+        {
+            "q": "Ən uzun çay hansıdır?",
+            "a": [
+                "Dunay çayı",
+                "Nil çayı",
+                "Mississippi çayı",
+                "Amazon çayı"
+            ],
+            "t": 1
+        },
+        {
+            "q": "Hansı element su molekulunda olur?",
+            "a": [
+                "Kalsium",
+                "Karbon",
+                "Azot",
+                "Hidrogen"
+            ],
+            "t": 3
+        },
+        {
+            "q": "E = mc² formulunu kim yaratmışdır?",
+            "a": [
+                "Stiven Hoking",
+                "İsaak Nyuton",
+                "Albert Eynşteyn",
+                "Nikola Tesla"
+            ],
+            "t": 2
+        }
+    ]
+}

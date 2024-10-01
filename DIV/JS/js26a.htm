@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            document.write("<img />")
+            let img = document.querySelector('img')
+            img.setAttribute('src', 'img/5.jpg')
+
+            img.onload = () => console.log(img.offsetWidth, img.offsetHeight)
+        </script>
+    </body>
+</html>
