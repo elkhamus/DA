@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.flex { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  flex: 0 1 24%;
+  max-width: 400px;
+  box-shadow: 0 0 10px #333;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px; 
+
+   img { width: 100%; object-fit: cover }
+   h2 { color: #AAA; text-align: center }
+   ul { list-style: none }
+  .heart {
+    cursor: pointer;
+    font-size: 1.5em;
+    .active { color: red }
+  }
+  .counter {
+    
+  }
+}
+
