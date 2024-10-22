@@ -1,5 +1,6 @@
-import { Container, Nav, Navbar } from "react-bootstrap"
+import { Badge, Container, Nav, Navbar } from "react-bootstrap"
 import {NavLink } from "react-router-dom"
+import { BsCart4 } from "react-icons/bs"
 
 function Header() {
   return (
@@ -12,7 +13,11 @@ function Header() {
                     <NavLink className="nav-link" to="pizza">Pizza</NavLink>
                     <NavLink className="nav-link" to="contact">Contact</NavLink>
                 </Nav>
-                <div>test</div>
+                <span role="button" className="position-relative">
+                  <BsCart4 />
+                  <Badge className="position-absolute top-0 start-100 translate-middle rounded-pill bg-danger">
+                    0</Badge>
+                </span>
             </Container>
         </Navbar>
     </header>
